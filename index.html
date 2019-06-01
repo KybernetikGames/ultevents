@@ -1,0 +1,294 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/ultevents/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/ultevents/assets/img/favicon.ico" type="image/x-icon">
+        <title>UltEvents - Home</title>
+        <link href="/ultevents/assets/css/highlight.css" rel="stylesheet">
+        <link href="/ultevents/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/ultevents/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/ultevents/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/ultevents/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/ultevents/assets/css/override.css" rel="stylesheet">
+        <script src="/ultevents/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/ultevents/assets/js/bootstrap.min.js"></script>        
+        <script src="/ultevents/assets/js/app.min.js"></script>         
+        <script src="/ultevents/assets/js/highlight.pack.js"></script>   
+        <script src="/ultevents/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/ultevents/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/ultevents/assets/js/mermaid.min.js"></script>
+        <script src="/ultevents/assets/js/svg-pan-zoom.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/ultevents/assets/js/html5shiv.min.js"></script>
+        <script src="/ultevents/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        
+    </head>
+    <body class="hold-transition wyam layout-boxed layout-top-nav no-gutter">    
+        <div class="top-banner"></div>
+        <div class="wrapper">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/ultevents/" class="logo">
+                            <span>UltEvents</span>
+                </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                                    <li><a href="/ultevents/docs"><img src="/ultevents/images/docs.png" height="20" style="position:relative; left:-5px; top:-1px;"> Docs</a></li>
+        <li><a href="/ultevents/api/UltEvents"><img src="/ultevents/images/api.png" height="20" style="position:relative; left:-3px; top:-1px;"> API v2.0</a></li>
+        <li><a href="mailto:KybernetikGames@gmail.com?subject=UltEvents"><img src="/ultevents/images/contact.png" height="20" style="position:relative; left:-4px; top:-1px;"> Contact</a></li>
+        <li><a href="http://u3d.as/15Zc"><img src="/ultevents/images/unity-logo.png" height="20" style="position:relative; left:-4px; top:-1px;"> Get</a></li>
+        <li><a href="https://kybernetikgames.github.io/kailas-dierk/unity-assets"><img src="/ultevents/images/kybernetik.png" height="20" style="position:relative; left:-2px; top:-1px;"> Other Assets</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar hidden">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+    <div id="infobar-headings"></div>
+
+                </section>
+                <section class="sidebar">    
+                                     
+                    
+
+                    <ul class="sidebar-menu">
+                        
+
+                    </ul>
+                            
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+
+<style>
+
+tr:nth-of-type(odd) { background-color: #eee9bb; }
+tr:nth-of-type(even) { background-color: #ddd988; }
+
+td
+{
+    padding: 1em;
+    font-size: 1.5em;
+}
+
+h1
+{
+    margin: 0;
+    padding: 0;
+    top: 0;
+}
+
+</style>
+
+<img src="images/title.png" class="img-responsive">
+
+<table>
+    <tbody><tr><td>
+        <p>UltEvents is a <a href="https://unity3d.com">Unity</a> plugin which allows you to easily setup and configure persistent event callbacks via the Inspector. It serves the same purpose as the inbuilt <a href="https://docs.unity3d.com/Manual/UnityEvents.html">UnityEvents</a>, but has an improved user interface, better features, and fewer restrictions.</p>
+        Download it for <strong>free</strong> from the <a href="http://u3d.as/15Zc">Unity Asset Store</a> and check out the <a href="docs">Documentation</a> to get started.
+    </td></tr>
+
+
+
+    <tr><td>
+        <p></p><h1>Example</h1><p></p>
+        <p>This is what a <em>Pressure Plate</em> that triggers a <em>Boulder</em> trap might look like. It uses the <code><a href="/ultevents/api/UltEvents/TriggerEvents3D">TriggerEvents3D</a></code> script which has several <code><a href="/ultevents/api/UltEvents/UltEvent">UltEvent</a></code>s that it executes in response to Unity's physics trigger messages. Specifically, it is using <code>OnTriggerEnter</code> to:</p>
+        <img src="images/trigger-event.png" class="img-responsive img-right">
+        <ol>
+            <li>Deactivate the <em>Pressure Plate</em>'s <code>Collider</code> so it can't be triggered again.</li>
+            <li>Apply some force to the <em>Boulder</em>'s <code>Rigidbody</code> to start it rolling down a hill.</li>
+            <li>Get the position of the <em>Pressure Plate</em>.</li>
+            <li>Play the <em>Trap Trigger Click</em> sound at that position.</li>
+        </ol>
+        This was all done without writing any custom scripts and other than step #1, none of it could be done with a <code>UnityEvent</code>. Keep reading to find out why.
+    </td></tr>
+
+
+
+    <tr><td>
+        <p></p><h1>Parameter Types</h1><p></p>
+        <p><code>UnityEvent</code>s can only call methods with the following parameter types: <code>bool</code>, <code>int</code>, <code>float</code>, <code>string</code>, or anything derived from <code>UnityEngine.Object</code>.</p>
+        <p><code><a href="/ultevents/api/UltEvents/UltEvent">UltEvent</a></code>s support all those types as well as <code>Enum</code> (regular and flags), <code>Vector</code> (2, 3, 4), <code>Quaternion</code>, <code>Rect</code>, <code>Color</code>, and <code>Color32</code>.</p>
+        Step #2 of the example above uses <code>Vector3</code> and <code>ForceMode</code> (an <code>Enum</code>) parameters.
+    </td></tr>
+
+
+
+    <tr><td>
+        <p></p><h1>Parameter Count</h1><p></p>
+        <p><code>UnityEvent</code>s can only call methods with 0 or 1 parameters.</p>
+        <p><code><a href="/ultevents/api/UltEvents/UltEvent">UltEvent</a></code>s support any number of parameters.</p>
+        Steps #2 and #4 of the example above both call methods with multiple parameters.
+    </td></tr>
+
+
+
+    <tr><td>
+        <p></p><h1>Access Modifiers</h1><p></p>
+        <p><code>UnityEvent</code>s can only call <code>public</code> methods.</p>
+        <p><code><a href="/ultevents/api/UltEvents/UltEvent">UltEvent</a></code>s allow methods with any access modifiers, including <code>private</code> and <code>static</code>.</p>
+        Step #4 of the example above uses this to call <code>AudioSource.PlayClipAtPoint</code>. Other common <code>static</code> methods include <code>Object.Instantiate</code> and <code>Debug.Log</code>.
+    </td></tr>
+
+
+
+    <tr><td>
+        <p></p><h1>Return Values</h1><p></p>
+        <p><code>UnityEvent</code>s can only call methods which return <code>void</code>.</p>
+        <p><code><a href="/ultevents/api/UltEvents/UltEvent">UltEvent</a></code>s allow methods with any return type and allows the returned value to be used as a parameter in methods that come later in the list. If the value is not used it will simply be ignored.</p>
+        Steps #3 and #4 of the example above use this to get the <code>Transform.position</code> and use that as the <code>position</code> at which the sound should be played.
+    </td></tr>
+
+
+
+    <tr><td>
+        <p></p><h1>Inspector Layout</h1><p></p>
+        <p><code><a href="/ultevents/api/UltEvents/UltEvent">UltEvent</a></code>s also have a much better <a href="docs/inspector-configuration">Inspector interface</a> than <code>UnityEvent</code>s:</p>
+        <ul>
+            <li>Collapse the event into a single line to occupy less screen space.</li>
+            <li>Parameterless functions only take a single line.</li>
+            <li>Function parameter names are displayed.</li>
+            <li>Select a listener on a specific <code>Component</code> when there is more than one of the same type on the target object.</li>
+            <li>Drag listeners around to reorder them.</li>
+            <li>Keyboard shortcuts and context menu functions allow you to easily Copy, Paste, Add, Delete, and even Invoke events.</li>
+            <li>Better organized method selection menus which can be customised to suit your needs.</li>
+            <li>Button to quickly find a similarly named method if the target is missing.</li>
+            <li>Dynamic listeners are displayed in the footer (ones added by code).</li>
+        </ul>
+        <p>Individual tasks also tend to require fewer clicks with <code><a href="/ultevents/api/UltEvents/UltEvent">UltEvent</a></code>s:</p>
+        <ul>
+            <li>Instead of needing to add a new listener then drag in a target, you can just drag the target onto the event header.</li>
+            <li>Instead of needing to select a listener then press the remove button in the footer, each listener has its own remove button.</li>
+            <li>If you assign a specific <code>Component</code> as the target, it will immediately open the method selection menu which will let you select methods directly from that component instead of going through a sub-menu every time.</li>
+        </ul>
+    </td></tr>
+
+
+
+    <tr><td>
+        <p>If you like this asset, please consider supporting me by buying some of my <a href="https://kybernetikgames.github.io/kailas-dierk/unity-assets">other assets</a>:</p>
+        <ul>
+            <li><a href="http://u3d.as/19Xd">Animancer</a> gives you the ability to play and control animations dynamically at runtime using simple scripts instead of manually configuring inflexible Animator Controllers that encourage bad programming practices.</li>
+            <li><a href="http://u3d.as/Kbg">Inspector Gadgets</a> provides a variety of useful enhancements to the Unity Editor which can be useful for anyone.</li>
+            <li><a href="http://u3d.as/rt6">Weaver</a> lets you avoid littering your code with magic strings and provides a framework for generating procedural assets.</li>
+        </ul>
+    </td></tr>
+
+</tbody></table>                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                Generated by <a href="https://wyam.io">Wyam</a>
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>

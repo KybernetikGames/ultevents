@@ -1,0 +1,291 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/ultevents/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/ultevents/assets/img/favicon.ico" type="image/x-icon">
+        <title>UltEvents - UltEvents vs. UnityEvents</title>
+        <link href="/ultevents/assets/css/highlight.css" rel="stylesheet">
+        <link href="/ultevents/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/ultevents/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/ultevents/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/ultevents/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/ultevents/assets/css/override.css" rel="stylesheet">
+        <script src="/ultevents/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/ultevents/assets/js/bootstrap.min.js"></script>        
+        <script src="/ultevents/assets/js/app.min.js"></script>         
+        <script src="/ultevents/assets/js/highlight.pack.js"></script>   
+        <script src="/ultevents/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/ultevents/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/ultevents/assets/js/mermaid.min.js"></script>
+        <script src="/ultevents/assets/js/svg-pan-zoom.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/ultevents/assets/js/html5shiv.min.js"></script>
+        <script src="/ultevents/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/ultevents/" class="logo">
+                            <span>UltEvents</span>
+                </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                                    <li class="active"><a href="/ultevents/docs"><img src="/ultevents/images/docs.png" height="20" style="position:relative; left:-5px; top:-1px;"> Docs</a></li>
+        <li><a href="/ultevents/api/UltEvents"><img src="/ultevents/images/api.png" height="20" style="position:relative; left:-3px; top:-1px;"> API v2.0</a></li>
+        <li><a href="mailto:KybernetikGames@gmail.com?subject=UltEvents"><img src="/ultevents/images/contact.png" height="20" style="position:relative; left:-4px; top:-1px;"> Contact</a></li>
+        <li><a href="http://u3d.as/15Zc"><img src="/ultevents/images/unity-logo.png" height="20" style="position:relative; left:-4px; top:-1px;"> Get</a></li>
+        <li><a href="https://kybernetikgames.github.io/kailas-dierk/unity-assets"><img src="/ultevents/images/kybernetik.png" height="20" style="position:relative; left:-2px; top:-1px;"> Other Assets</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#performance">Performance</a></p>
+<hr class="infobar-hidden">
+</div>
+
+                </section>
+                <section class="sidebar">    
+                                     
+                    
+
+                    <ul class="sidebar-menu">
+                        
+
+                <li class="selected"><a href="/ultevents/docs/ult-vs-unity">UltEvents vs. UnityEvents</a></li>
+                <li><a href="/ultevents/docs/creating-and-triggering">Creating and Triggering</a></li>
+                <li><a href="/ultevents/docs/inspector-configuration">Inspector Configuration</a></li>
+                <li><a href="/ultevents/docs/advanced">Advanced</a></li>
+                <li><a href="/ultevents/docs/changes">Change Log</a></li>
+
+                    </ul>
+                            
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+		<section class="content-header">
+			<h1>UltEvents vs. UnityEvents</h1>
+		</section>
+	<section class="content">
+		<p></p><table>
+  <tbody><tr><td style="width:50%;padding-right:8.5px;vertical-align:top;"><p><code>UnityEvents</code> are a system built into Unity which allows users to easily setup and configure persistent event callbacks via the Inspector.</p></td><td style="width:50%;padding-left:8.5px;vertical-align:top;"><p><code>UltEvents</code> serve the same purpose, but with an improved user interface, better features, and fewer restrictions.</p></td>
+  </tr>
+  <tr><td style="padding-right:8.5px"><img src="unityevent.png" style="width:100%"></td><td style="padding-left:8.5px"><img src="ultevent-collapsed.png" style="width:100%"><img src="ultevent-expanded.png" style="width:100%;padding-top:17px"></td>
+  </tr>
+</tbody></table><p></p>
+<style>
+
+.pane
+{
+    width: 15px;
+    height: 73px;
+    float: left;
+}
+
+.vertical
+{
+    display: inline-block;
+    margin-right: -999px;
+    transform-origin: bottom left;
+    transform: translate(0, 53px) rotate(90deg) translate(-100%, 0);
+}
+
+.y
+{
+    background-color: #b91;
+    text-align: center;
+}
+
+.n
+{ 
+    text-align: center;
+}
+
+details
+{
+    border: 0;
+    padding: 0;
+}
+
+summary
+{
+    margin: 0;
+    padding: 0;
+}
+
+</style>
+<table class="table table-bordered">
+  <thead><tr>
+    <th style="font-size:2em">Serializable Event System Feature Comparison</th>
+    <th style="width:15px"><div class="pane"><span class="vertical">UnityEvents</span></div></th>
+    <th style="width:15px"><div class="pane"><span class="vertical">UltEvents</span></div></th>
+  </tr></thead>
+  
+  <tbody>
+  <tr class="section"><td colspan="3">Features</td></tr>
+  
+  <tr><td>Persistent listeners (serialized)</td><td class="y"></td><td class="y"></td></tr>
+  <tr><td>Dynamic listeners (non-serialized)</td><td class="y"></td><td class="y"></td></tr>
+  <tr><td>Parameter types: bool, int, float, string, UnityEngine.Object</td><td class="y"></td><td class="y"></td></tr>
+  <tr><td>Parameter types: Enum (regular and flags), Vector (2, 3, 4), Quaternion, Rect, Color, Color32</td><td class="n"></td><td class="y"></td></tr>
+  <tr><td>Unlimited parameter count</td><td class="n"><a href="#parameter-count">[1]</a></td><td class="y"></td></tr>
+  <tr><td>Allows methods with non-void return types</td><td class="n"></td><td class="y"></td></tr>
+  <tr><td>Use values returned from earlier calls as parameters</td><td class="n"></td><td class="y"></td></tr>
+  <tr><td>Public methods</td><td class="y"></td><td class="y"></td></tr>
+  <tr><td>Non-public methods</td><td class="n"></td><td class="y"></td></tr>
+  <tr><td>Static methods</td><td class="n"></td><td class="y"></td></tr>
+  <tr><td>Source code included</td><td class="n"></td><td class="y"></td></tr>
+  <tr><td>Disable specific listeners entirely or just in Edit Mode</td><td class="y"></td><td class="n"><a href="#call-state">[2]</a></td></tr>
+  <tr class="section"><td colspan="3">User Interface</td></tr>
+  
+  <tr><td>Compact and collapsible GUI</td><td class="n"></td><td class="y"></td></tr>
+  <tr><td>Parameterless functions only take a single line</td><td class="n"></td><td class="y"></td></tr>
+  <tr><td>Function parameter names are displayed</td><td class="n"></td><td class="y"></td></tr>
+  <tr><td>Customizable display options</td><td class="n"></td><td class="y"></td></tr>
+  <tr><td>Reorderable function list</td><td class="n"></td><td class="y"></td></tr>
+  <tr><td>Keyboard shortcuts (Copy, Paste, Add, Delete)</td><td class="n"></td><td class="y"></td></tr>
+  <tr><td>Context menu commands (Invoke, Clear, Copy, Paste)</td><td class="n"></td><td class="y"></td></tr>
+  <tr><td>Select a specific component when there are multiple of the same type</td><td class="n"></td><td class="y"></td></tr>
+  <tr><td>Button to quickly find a similarly named method if the target is missing</td><td class="n"></td><td class="y"></td></tr>
+  <tr><td>Displays dynamic (non-serialized) listeners in the GUI</td><td class="n"></td><td class="y"></td></tr>
+  
+  </tbody>
+</table>
+<p id="parameter-count">[1] <code>UnityEvent</code>s only support methods with 0 or 1 parameters while <code><a href="/ultevents/api/UltEvents/UltEvent">UltEvent</a></code>s can call methods with any number of parameters.</p>
+<p id="call-state">[2] <code>UnityEvent</code>s have a dropdown menu for each persistent listener to select when it should be executed. The default is <code>Runtime Only</code> which will skip that listener if the event is invoked in Edit Mode in the Unity Editor. <code>Off</code> can also be used to disable that listener entirely. In the development of <code><a href="/ultevents/api/UltEvents/UltEvent">UltEvent</a></code>s this feature was deemed to not be particularly useful so it was not implemented to avoid it's (admittedly very minor) performance cost. If you don't want an event to be triggered in Edit Mode, then don't trigger it.</p>
+<h1 id="performance">Performance</h1>
+<ul>
+<li><code><a href="/ultevents/api/UltEvents/UltEvent">UltEvent</a></code>s and <code>UnityEvent</code>s both have significantly worse performance than regular <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/">C# Delegates</a> like <code>System.Action</code>. If you only want an event that can be used in code without wanting to set it up in the Inspector or save it as part of a scene/prefab, then you should simply use regular delegates.</li>
+<li>When calling methods with no parameters, <code><a href="/ultevents/api/UltEvents/UltEvent">UltEvent</a></code>s are slightly faster than <code>UnityEvent</code>s.</li>
+<li>When calling methods with one parameter, <code>UnityEvent</code>s are slightly faster than <code><a href="/ultevents/api/UltEvents/UltEvent">UltEvent</a></code>s.</li>
+<li>Methods with more than one parameter simply cannot be called by <code>UnityEvent</code>s.</li>
+<li>The package includes some simple performance testing scripts in the <code>UltEvents.Benchmarks</code> namespace.</li>
+</ul>
+
+	</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                Generated by <a href="https://wyam.io">Wyam</a>
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>
