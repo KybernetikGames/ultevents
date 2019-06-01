@@ -39,160 +39,6 @@ var searchModule = function() {
     a(
         {
             id:0,
-            title:"DelayedUltEventHolder",
-            content:"DelayedUltEventHolder",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/ultevents/api/UltEvents/DelayedUltEventHolder',
-            title:"DelayedUltEventHolder",
-            description:""
-        }
-    );
-    a(
-        {
-            id:1,
-            title:"IUltEvent",
-            content:"IUltEvent",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/ultevents/api/UltEvents/IUltEvent',
-            title:"IUltEvent",
-            description:""
-        }
-    );
-    a(
-        {
-            id:2,
-            title:"BoolPref",
-            content:"BoolPref",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/ultevents/api/UltEvents.Editor/BoolPref',
-            title:"BoolPref",
-            description:""
-        }
-    );
-    a(
-        {
-            id:3,
-            title:"IUltEvent",
-            content:"IUltEvent",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/ultevents/api/UltEvents/IUltEvent_4',
-            title:"IUltEvent<T0, T1, T2, T3>",
-            description:""
-        }
-    );
-    a(
-        {
-            id:4,
-            title:"IUltEvent",
-            content:"IUltEvent",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/ultevents/api/UltEvents/IUltEvent_1',
-            title:"IUltEvent<T0>",
-            description:""
-        }
-    );
-    a(
-        {
-            id:5,
-            title:"UltEvent",
-            content:"UltEvent",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/ultevents/api/UltEvents/UltEvent_2',
-            title:"UltEvent<T0, T1>",
-            description:""
-        }
-    );
-    a(
-        {
-            id:6,
-            title:"CollisionEvent",
-            content:"CollisionEvent",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/ultevents/api/UltEvents/CollisionEvent3D',
-            title:"CollisionEvent3D",
-            description:""
-        }
-    );
-    a(
-        {
-            id:7,
-            title:"LifeCycleEvents",
-            content:"LifeCycleEvents",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/ultevents/api/UltEvents/LifeCycleEvents',
-            title:"LifeCycleEvents",
-            description:""
-        }
-    );
-    a(
-        {
-            id:8,
-            title:"CollisionEvents",
-            content:"CollisionEvents",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/ultevents/api/UltEvents/CollisionEvents3D',
-            title:"CollisionEvents3D",
-            description:""
-        }
-    );
-    a(
-        {
-            id:9,
-            title:"UltEventUtils",
-            content:"UltEventUtils",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/ultevents/api/UltEvents/UltEventUtils',
-            title:"UltEventUtils",
-            description:""
-        }
-    );
-    a(
-        {
-            id:10,
-            title:"TriggerEvents",
-            content:"TriggerEvents",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/ultevents/api/UltEvents/TriggerEvents3D',
-            title:"TriggerEvents3D",
-            description:""
-        }
-    );
-    a(
-        {
-            id:11,
             title:"SerializedPropertyAccessor",
             content:"SerializedPropertyAccessor",
             description:'',
@@ -206,7 +52,77 @@ var searchModule = function() {
     );
     a(
         {
-            id:12,
+            id:1,
+            title:"UltEvent",
+            content:"UltEvent",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/ultevents/api/UltEvents/UltEvent_1',
+            title:"UltEvent<T0>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:2,
+            title:"LifeCycleEvents",
+            content:"LifeCycleEvents",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/ultevents/api/UltEvents/LifeCycleEvents',
+            title:"LifeCycleEvents",
+            description:""
+        }
+    );
+    a(
+        {
+            id:3,
+            title:"EventBenchmarkBase",
+            content:"EventBenchmarkBase",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/ultevents/api/UltEvents.Benchmarks/EventBenchmarkBase',
+            title:"EventBenchmarkBase",
+            description:""
+        }
+    );
+    a(
+        {
+            id:4,
+            title:"UltEvent",
+            content:"UltEvent",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/ultevents/api/UltEvents/UltEvent_2',
+            title:"UltEvent<T0, T1>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:5,
+            title:"IUltEvent",
+            content:"IUltEvent",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/ultevents/api/UltEvents/IUltEvent_2',
+            title:"IUltEvent<T0, T1>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:6,
             title:"UnityEventBenchmark",
             content:"UnityEventBenchmark",
             description:'',
@@ -220,15 +136,99 @@ var searchModule = function() {
     );
     a(
         {
-            id:13,
-            title:"UltEventBase",
-            content:"UltEventBase",
+            id:7,
+            title:"UpdateEvents",
+            content:"UpdateEvents",
             description:'',
             tags:''
         },
         {
-            url:'/ultevents/api/UltEvents/UltEventBase',
-            title:"UltEventBase",
+            url:'/ultevents/api/UltEvents/UpdateEvents',
+            title:"UpdateEvents",
+            description:""
+        }
+    );
+    a(
+        {
+            id:8,
+            title:"BoolPref",
+            content:"BoolPref",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/ultevents/api/UltEvents.Editor/BoolPref',
+            title:"BoolPref",
+            description:""
+        }
+    );
+    a(
+        {
+            id:9,
+            title:"TriggerEvents",
+            content:"TriggerEvents",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/ultevents/api/UltEvents/TriggerEvents2D',
+            title:"TriggerEvents2D",
+            description:""
+        }
+    );
+    a(
+        {
+            id:10,
+            title:"ArrayCache",
+            content:"ArrayCache",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/ultevents/api/UltEvents/ArrayCache_1',
+            title:"ArrayCache<T>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:11,
+            title:"IUltEventBase",
+            content:"IUltEventBase",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/ultevents/api/UltEvents/IUltEventBase',
+            title:"IUltEventBase",
+            description:""
+        }
+    );
+    a(
+        {
+            id:12,
+            title:"UltEvent",
+            content:"UltEvent",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/ultevents/api/UltEvents/UltEvent_3',
+            title:"UltEvent<T0, T1, T2>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:13,
+            title:"EventBenchmark",
+            content:"EventBenchmark",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/ultevents/api/UltEvents.Benchmarks/EventBenchmark',
+            title:"EventBenchmark",
             description:""
         }
     );
@@ -241,8 +241,8 @@ var searchModule = function() {
             tags:''
         },
         {
-            url:'/ultevents/api/UltEvents/TriggerEvent2D',
-            title:"TriggerEvent2D",
+            url:'/ultevents/api/UltEvents/TriggerEvent3D',
+            title:"TriggerEvent3D",
             description:""
         }
     );
@@ -263,42 +263,42 @@ var searchModule = function() {
     a(
         {
             id:16,
-            title:"UltEvent",
-            content:"UltEvent",
+            title:"CollisionEvent",
+            content:"CollisionEvent",
             description:'',
             tags:''
         },
         {
-            url:'/ultevents/api/UltEvents/UltEvent_3',
-            title:"UltEvent<T0, T1, T2>",
+            url:'/ultevents/api/UltEvents/CollisionEvent2D',
+            title:"CollisionEvent2D",
             description:""
         }
     );
     a(
         {
             id:17,
-            title:"UltEventHolder",
-            content:"UltEventHolder",
+            title:"IUltEvent",
+            content:"IUltEvent",
             description:'',
             tags:''
         },
         {
-            url:'/ultevents/api/UltEvents/UltEventHolder',
-            title:"UltEventHolder",
+            url:'/ultevents/api/UltEvents/IUltEvent_4',
+            title:"IUltEvent<T0, T1, T2, T3>",
             description:""
         }
     );
     a(
         {
             id:18,
-            title:"TriggerEvents",
-            content:"TriggerEvents",
+            title:"CollisionEvents",
+            content:"CollisionEvents",
             description:'',
             tags:''
         },
         {
-            url:'/ultevents/api/UltEvents/TriggerEvents2D',
-            title:"TriggerEvents2D",
+            url:'/ultevents/api/UltEvents/CollisionEvents2D',
+            title:"CollisionEvents2D",
             description:""
         }
     );
@@ -319,20 +319,6 @@ var searchModule = function() {
     a(
         {
             id:20,
-            title:"ObjectPicker",
-            content:"ObjectPicker",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/ultevents/api/UltEvents.Editor/ObjectPicker',
-            title:"ObjectPicker",
-            description:""
-        }
-    );
-    a(
-        {
-            id:21,
             title:"IUltEvent",
             content:"IUltEvent",
             description:'',
@@ -346,147 +332,35 @@ var searchModule = function() {
     );
     a(
         {
-            id:22,
-            title:"EventBenchmark",
-            content:"EventBenchmark",
+            id:21,
+            title:"TriggerEvents",
+            content:"TriggerEvents",
             description:'',
             tags:''
         },
         {
-            url:'/ultevents/api/UltEvents.Benchmarks/EventBenchmark',
-            title:"EventBenchmark",
+            url:'/ultevents/api/UltEvents/TriggerEvents3D',
+            title:"TriggerEvents3D",
+            description:""
+        }
+    );
+    a(
+        {
+            id:22,
+            title:"DelayedUltEventHolder",
+            content:"DelayedUltEventHolder",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/ultevents/api/UltEvents/DelayedUltEventHolder',
+            title:"DelayedUltEventHolder",
             description:""
         }
     );
     a(
         {
             id:23,
-            title:"IUltEventBase",
-            content:"IUltEventBase",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/ultevents/api/UltEvents/IUltEventBase',
-            title:"IUltEventBase",
-            description:""
-        }
-    );
-    a(
-        {
-            id:24,
-            title:"PersistentArgument",
-            content:"PersistentArgument",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/ultevents/api/UltEvents/PersistentArgument',
-            title:"PersistentArgument",
-            description:""
-        }
-    );
-    a(
-        {
-            id:25,
-            title:"EventBenchmarkBase",
-            content:"EventBenchmarkBase",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/ultevents/api/UltEvents.Benchmarks/EventBenchmarkBase',
-            title:"EventBenchmarkBase",
-            description:""
-        }
-    );
-    a(
-        {
-            id:26,
-            title:"Clipboard",
-            content:"Clipboard",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/ultevents/api/UltEvents.Editor/Clipboard',
-            title:"Clipboard",
-            description:""
-        }
-    );
-    a(
-        {
-            id:27,
-            title:"UltEvent",
-            content:"UltEvent",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/ultevents/api/UltEvents/UltEvent_1',
-            title:"UltEvent<T0>",
-            description:""
-        }
-    );
-    a(
-        {
-            id:28,
-            title:"PersistentArgumentType",
-            content:"PersistentArgumentType",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/ultevents/api/UltEvents/PersistentArgumentType',
-            title:"PersistentArgumentType",
-            description:""
-        }
-    );
-    a(
-        {
-            id:29,
-            title:"UpdateEvents",
-            content:"UpdateEvents",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/ultevents/api/UltEvents/UpdateEvents',
-            title:"UpdateEvents",
-            description:""
-        }
-    );
-    a(
-        {
-            id:30,
-            title:"TriggerEvent",
-            content:"TriggerEvent",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/ultevents/api/UltEvents/TriggerEvent3D',
-            title:"TriggerEvent3D",
-            description:""
-        }
-    );
-    a(
-        {
-            id:31,
-            title:"UltEvent",
-            content:"UltEvent",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/ultevents/api/UltEvents/UltEvent_4',
-            title:"UltEvent<T0, T1, T2, T3>",
-            description:""
-        }
-    );
-    a(
-        {
-            id:32,
             title:"PersistentCall",
             content:"PersistentCall",
             description:'',
@@ -500,57 +374,183 @@ var searchModule = function() {
     );
     a(
         {
-            id:33,
-            title:"ArrayCache",
-            content:"ArrayCache",
+            id:24,
+            title:"UltEventBase",
+            content:"UltEventBase",
             description:'',
             tags:''
         },
         {
-            url:'/ultevents/api/UltEvents/ArrayCache_1',
-            title:"ArrayCache<T>",
+            url:'/ultevents/api/UltEvents/UltEventBase',
+            title:"UltEventBase",
             description:""
         }
     );
     a(
         {
-            id:34,
+            id:25,
+            title:"Clipboard",
+            content:"Clipboard",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/ultevents/api/UltEvents.Editor/Clipboard',
+            title:"Clipboard",
+            description:""
+        }
+    );
+    a(
+        {
+            id:26,
+            title:"TriggerEvent",
+            content:"TriggerEvent",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/ultevents/api/UltEvents/TriggerEvent2D',
+            title:"TriggerEvent2D",
+            description:""
+        }
+    );
+    a(
+        {
+            id:27,
+            title:"ObjectPicker",
+            content:"ObjectPicker",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/ultevents/api/UltEvents.Editor/ObjectPicker',
+            title:"ObjectPicker",
+            description:""
+        }
+    );
+    a(
+        {
+            id:28,
             title:"CollisionEvents",
             content:"CollisionEvents",
             description:'',
             tags:''
         },
         {
-            url:'/ultevents/api/UltEvents/CollisionEvents2D',
-            title:"CollisionEvents2D",
+            url:'/ultevents/api/UltEvents/CollisionEvents3D',
+            title:"CollisionEvents3D",
             description:""
         }
     );
     a(
         {
-            id:35,
-            title:"CollisionEvent",
-            content:"CollisionEvent",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/ultevents/api/UltEvents/CollisionEvent2D',
-            title:"CollisionEvent2D",
-            description:""
-        }
-    );
-    a(
-        {
-            id:36,
+            id:29,
             title:"IUltEvent",
             content:"IUltEvent",
             description:'',
             tags:''
         },
         {
-            url:'/ultevents/api/UltEvents/IUltEvent_2',
-            title:"IUltEvent<T0, T1>",
+            url:'/ultevents/api/UltEvents/IUltEvent_1',
+            title:"IUltEvent<T0>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:30,
+            title:"PersistentArgument",
+            content:"PersistentArgument",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/ultevents/api/UltEvents/PersistentArgument',
+            title:"PersistentArgument",
+            description:""
+        }
+    );
+    a(
+        {
+            id:31,
+            title:"PersistentArgumentType",
+            content:"PersistentArgumentType",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/ultevents/api/UltEvents/PersistentArgumentType',
+            title:"PersistentArgumentType",
+            description:""
+        }
+    );
+    a(
+        {
+            id:32,
+            title:"IUltEvent",
+            content:"IUltEvent",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/ultevents/api/UltEvents/IUltEvent',
+            title:"IUltEvent",
+            description:""
+        }
+    );
+    a(
+        {
+            id:33,
+            title:"CollisionEvent",
+            content:"CollisionEvent",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/ultevents/api/UltEvents/CollisionEvent3D',
+            title:"CollisionEvent3D",
+            description:""
+        }
+    );
+    a(
+        {
+            id:34,
+            title:"UltEventUtils",
+            content:"UltEventUtils",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/ultevents/api/UltEvents/UltEventUtils',
+            title:"UltEventUtils",
+            description:""
+        }
+    );
+    a(
+        {
+            id:35,
+            title:"UltEvent",
+            content:"UltEvent",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/ultevents/api/UltEvents/UltEvent_4',
+            title:"UltEvent<T0, T1, T2, T3>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:36,
+            title:"UltEventHolder",
+            content:"UltEventHolder",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/ultevents/api/UltEvents/UltEventHolder',
+            title:"UltEventHolder",
             description:""
         }
     );
