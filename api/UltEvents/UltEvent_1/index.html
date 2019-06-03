@@ -60,7 +60,7 @@
         <li class="active"><a href="/ultevents/api/UltEvents"><img src="/ultevents/images/api.png" height="20" style="position:relative; left:-3px; top:-1px;"> API v2.0</a></li>
         <li><a href="https://forum.unity.com/threads/687970"><img src="/ultevents/images/forum.png" height="20" style="position:relative; left:-4px; top:-1px;"> Forum</a></li>
         <li><a href="mailto:KybernetikGames@gmail.com?subject=UltEvents"><img src="/ultevents/images/contact.png" height="20" style="position:relative; left:-4px; top:-1px;"> Contact</a></li>
-        <li><a href="http://u3d.as/15Zc"><img src="/ultevents/images/unity-logo.png" height="20" style="position:relative; left:-4px; top:-1px;"> Get</a></li>
+        <li><a href="http://u3d.as/15Zc"><img src="/ultevents/images/unity-logo.png" height="20" style="position:relative; left:-4px; top:-1px;"> Download</a></li>
         <li><a href="https://kybernetikgames.github.io/kailas-dierk/unity-assets"><img src="/ultevents/images/kybernetik.png" height="20" style="position:relative; left:-2px; top:-1px;"> Other Assets</a></li>
  
                         </ul>       
@@ -235,10 +235,10 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/ultevents/api/UltEvents/CollisionEvent3D">CollisionEvent3D</a></li>								
-											<li><a href="/ultevents/api/UltEvents/TriggerEvent3D">TriggerEvent3D</a></li>								
-											<li><a href="/ultevents/api/UltEvents/TriggerEvent2D">TriggerEvent2D</a></li>								
 											<li><a href="/ultevents/api/UltEvents/CollisionEvent2D">CollisionEvent2D</a></li>								
+											<li><a href="/ultevents/api/UltEvents/TriggerEvent2D">TriggerEvent2D</a></li>								
+											<li><a href="/ultevents/api/UltEvents/TriggerEvent3D">TriggerEvent3D</a></li>								
+											<li><a href="/ultevents/api/UltEvents/CollisionEvent3D">CollisionEvent3D</a></li>								
 									</ul>
 								</dd>			
 							
@@ -255,14 +255,14 @@
 	click Interface1 "/ultevents/api/UltEvents/IUltEventBase"
 	Type["UltEvent&lt;T0&gt;"]
 class Type type-node
-	Derived0["CollisionEvent3D"]--&gt;Type
-	click Derived0 "/ultevents/api/UltEvents/CollisionEvent3D"
-	Derived1["TriggerEvent3D"]--&gt;Type
-	click Derived1 "/ultevents/api/UltEvents/TriggerEvent3D"
-	Derived2["TriggerEvent2D"]--&gt;Type
-	click Derived2 "/ultevents/api/UltEvents/TriggerEvent2D"
-	Derived3["CollisionEvent2D"]--&gt;Type
-	click Derived3 "/ultevents/api/UltEvents/CollisionEvent2D"
+	Derived0["CollisionEvent2D"]--&gt;Type
+	click Derived0 "/ultevents/api/UltEvents/CollisionEvent2D"
+	Derived1["TriggerEvent2D"]--&gt;Type
+	click Derived1 "/ultevents/api/UltEvents/TriggerEvent2D"
+	Derived2["TriggerEvent3D"]--&gt;Type
+	click Derived2 "/ultevents/api/UltEvents/TriggerEvent3D"
+	Derived3["CollisionEvent3D"]--&gt;Type
+	click Derived3 "/ultevents/api/UltEvents/CollisionEvent3D"
 
 						</div>
 					</div>
@@ -386,7 +386,7 @@ public class UltEvent&lt;T0&gt; : UltEventBase, IUltEvent&lt;T0&gt;, IUltEventBa
 								<td><a href="/ultevents/api/UltEvents/UltEvent_1/2BB784C4">ParameterTypes</a></td>
 								<td>Type[]</td>
 								<td>
-									<div>The types of each of this event's parameters.</div>
+									<div>[Editor-Only] The types of each of this event's parameters.</div>
 								</td>
 							</tr>
 							<tr>
