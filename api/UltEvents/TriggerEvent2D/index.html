@@ -57,7 +57,7 @@
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
                                     <li><a href="/ultevents/docs"><img src="/ultevents/images/docs.png" height="20" style="position:relative; left:-5px; top:-1px;"> Docs</a></li>
-        <li class="active"><a href="/ultevents/api/UltEvents"><img src="/ultevents/images/api.png" height="20" style="position:relative; left:-3px; top:-1px;"> API v2.0</a></li>
+        <li class="active"><a href="/ultevents/api/UltEvents"><img src="/ultevents/images/api.png" height="20" style="position:relative; left:-3px; top:-1px;"> API v2.1</a></li>
         <li><a href="https://forum.unity.com/threads/687970"><img src="/ultevents/images/forum.png" height="20" style="position:relative; left:-4px; top:-1px;"> Forum</a></li>
         <li><a href="mailto:mail@kybernetik.com.au?subject=UltEvents"><img src="/ultevents/images/contact.png" height="20" style="position:relative; left:-4px; top:-1px;"> Contact</a></li>
         <li><a href="https://assetstore.unity.com/packages/tools/gui/ultevents-111307?aid=1100l8ah5"><img src="/ultevents/images/unity-logo.png" height="20" style="position:relative; left:-4px; top:-1px;"> Download</a></li>
@@ -341,7 +341,7 @@ public sealed class TriggerEvent2D : UltEvent&lt;Collider2D&gt;, IUltEvent&lt;Co
 								<td><a href="/ultevents/api/UltEvents/UltEventBase/1E3F6775">AddPersistentCall<wbr>&lt;T&gt;<wbr><wbr>(T, <wbr>Action)<wbr></a></td>
 								<td><a href="/ultevents/api/UltEvents/PersistentCall">PersistentCall</a></td>
 								<td>
-									<div>Ensures that 'e' isn't null and adds 'method' to its <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code>.</div>
+									<div>Ensures that `e` isn't null and adds `method` to its <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code>.</div>
 											<div><small><em>Inherited from <a href="/ultevents/api/UltEvents/UltEventBase">UltEventBase</a></em></small></div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -350,7 +350,7 @@ public sealed class TriggerEvent2D : UltEvent&lt;Collider2D&gt;, IUltEvent&lt;Co
 								<td><a href="/ultevents/api/UltEvents/UltEventBase/9ACABADA">AddPersistentCall<wbr>&lt;T&gt;<wbr><wbr>(T, <wbr>Delegate)<wbr></a></td>
 								<td><a href="/ultevents/api/UltEvents/PersistentCall">PersistentCall</a></td>
 								<td>
-									<div>Ensures that 'e' isn't null and adds 'method' to its <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code>.</div>
+									<div>Ensures that `e` isn't null and adds `method` to its <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code>.</div>
 											<div><small><em>Inherited from <a href="/ultevents/api/UltEvents/UltEventBase">UltEventBase</a></em></small></div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -360,7 +360,18 @@ public sealed class TriggerEvent2D : UltEvent&lt;Collider2D&gt;, IUltEvent&lt;Co
 								<td>void</td>
 								<td>
 									<div>
-    Sets the number of parameters passed to this event.
+    Stores the `parameter` so it can be accessed by <code class="cs">UltEvents.PersistentCall</code>s.
+    </div>
+											<div><small><em>Inherited from <a href="/ultevents/api/UltEvents/UltEventBase">UltEventBase</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/ultevents/api/UltEvents/UltEventBase/226587D2">CacheParameters<wbr>(Object[])<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Stores the `parameters` so they can be accessed by <code class="cs">UltEvents.PersistentCall</code>s.
     </div>
 											<div><small><em>Inherited from <a href="/ultevents/api/UltEvents/UltEventBase">UltEventBase</a></em></small></div>
 											<div><small><em>static</em></small></div>
@@ -380,7 +391,17 @@ public sealed class TriggerEvent2D : UltEvent&lt;Collider2D&gt;, IUltEvent&lt;Co
 								<td><a href="/ultevents/api/UltEvents/UltEventBase/C54F393A">CopyFrom<wbr>(UltEventBase)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div>Copies the contents of this the 'target' event to this event.</div>
+									<div>Copies the contents of this the `target` event to this event.</div>
+											<div><small><em>Inherited from <a href="/ultevents/api/UltEvents/UltEventBase">UltEventBase</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/ultevents/api/UltEvents/UltEventBase/C0B8E568">DynamicInvoke<wbr>(Object[])<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Invokes all <code class="cs">PersistentCalls</code> then all <code class="cs">DynamicCalls</code>.
+    </div>
 											<div><small><em>Inherited from <a href="/ultevents/api/UltEvents/UltEventBase">UltEventBase</a></em></small></div>
 								</td>
 							</tr>
@@ -388,7 +409,7 @@ public sealed class TriggerEvent2D : UltEvent&lt;Collider2D&gt;, IUltEvent&lt;Co
 								<td><a href="/ultevents/api/UltEvents/UltEventBase/A92FD671">Invoke<wbr>Persistent<wbr>Calls<wbr>()<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div>Invokes all <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code> registered to this event.</div>
+									<div>Invokes all <code class="cs">UltEvents.PersistentCall</code>s registered to this event.</div>
 											<div><small><em>Inherited from <a href="/ultevents/api/UltEvents/UltEventBase">UltEventBase</a></em></small></div>
 								</td>
 							</tr>
@@ -416,7 +437,7 @@ public sealed class TriggerEvent2D : UltEvent&lt;Collider2D&gt;, IUltEvent&lt;Co
 								<td><a href="/ultevents/api/UltEvents/UltEventBase/5416CCFA">RemovePersistentCall<wbr>(UltEventBase, <wbr>Action)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div>If 'e' isn't null, this method removes 'method' from its <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code>.</div>
+									<div>If `e` isn't null, this method removes `method` from its <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code>.</div>
 											<div><small><em>Inherited from <a href="/ultevents/api/UltEvents/UltEventBase">UltEventBase</a></em></small></div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -425,7 +446,7 @@ public sealed class TriggerEvent2D : UltEvent&lt;Collider2D&gt;, IUltEvent&lt;Co
 								<td><a href="/ultevents/api/UltEvents/UltEventBase/D27A9E92">RemovePersistentCall<wbr>(UltEventBase, <wbr>Delegate)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div>If 'e' isn't null, this method removes 'method' from its <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code>.</div>
+									<div>If `e` isn't null, this method removes `method` from its <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code>.</div>
 											<div><small><em>Inherited from <a href="/ultevents/api/UltEvents/UltEventBase">UltEventBase</a></em></small></div>
 											<div><small><em>static</em></small></div>
 								</td>

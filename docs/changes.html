@@ -57,7 +57,7 @@
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
                                     <li class="active"><a href="/ultevents/docs"><img src="/ultevents/images/docs.png" height="20" style="position:relative; left:-5px; top:-1px;"> Docs</a></li>
-        <li><a href="/ultevents/api/UltEvents"><img src="/ultevents/images/api.png" height="20" style="position:relative; left:-3px; top:-1px;"> API v2.0</a></li>
+        <li><a href="/ultevents/api/UltEvents"><img src="/ultevents/images/api.png" height="20" style="position:relative; left:-3px; top:-1px;"> API v2.1</a></li>
         <li><a href="https://forum.unity.com/threads/687970"><img src="/ultevents/images/forum.png" height="20" style="position:relative; left:-4px; top:-1px;"> Forum</a></li>
         <li><a href="mailto:mail@kybernetik.com.au?subject=UltEvents"><img src="/ultevents/images/contact.png" height="20" style="position:relative; left:-4px; top:-1px;"> Contact</a></li>
         <li><a href="https://assetstore.unity.com/packages/tools/gui/ultevents-111307?aid=1100l8ah5"><img src="/ultevents/images/unity-logo.png" height="20" style="position:relative; left:-4px; top:-1px;"> Download</a></li>
@@ -75,7 +75,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#ultevents-2.0">UltEvents 2.0</a></p>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#ultevents-2.1">UltEvents 2.1</a></p>
+<p><a href="#ultevents-2.0">UltEvents 2.0</a></p>
 <p><a href="#ultevents-1.2">UltEvents 1.2</a></p>
 <p><a href="#ultevents-1.1">UltEvents 1.1</a></p>
 <p><a href="#ultevents-1.0">UltEvents 1.0</a></p>
@@ -111,7 +112,21 @@
 			<h1>Change Log</h1>
 		</section>
 	<section class="content">
-		<h1 id="ultevents-2.0">UltEvents 2.0</h1>
+		<blockquote class="blockquote">
+<p>When updating plugins, you must delete any previous version from your project first. This is mandatory since Unity's package importer system doesn't delete or rename existing files so any old scripts that aren't directly overwritten will cause compile errors that prevent anything from working.</p>
+</blockquote>
+<h1 id="ultevents-2.1">UltEvents 2.1</h1>
+<ul>
+<li>2020-03-06</li>
+<li>Added <code>UltEventBase.DynamicInvoke</code> which takes an <code>object[]</code>.</li>
+<li>Added a display option for "Use Indentation" to optionally fill the full Inspector width instead of indenting properly.</li>
+<li>Flipped the <code>Get</code> and <code>Set</code> toggles for properties. <code>Get</code> is now shown when the getter is selected rather than as a button to change to the getter.</li>
+<li>Fixed exception caused by the UI Elements system when resizing arrays containing UltEvents.</li>
+<li>Fixed a few GUI spacing issues in Unity 2019.3+.</li>
+<li>Fixed the <code>Click to add a listener</code> label to not disappear when opening the context menu.</li>
+<li>Refactored <code>SerializedPropertyReference</code> into <code>Serialization.PropertyReference</code>.</li>
+</ul>
+<h1 id="ultevents-2.0">UltEvents 2.0</h1>
 <ul>
 <li>2019-06-03</li>
 <li>Moved everything out of the precompiled DLL to make it easier to access and modify the source code.</li>
@@ -120,7 +135,7 @@
 <p><strong>Warning</strong>: when upgrading from an earlier version you must delete the old version before importing the new one. This will also cause all of the <a href="creating-and-triggering#premade-event-scripts">Premade Event Scripts</a> in your project to go missing so you will need to set them all up again. This is an unfortunate side effect of the way Unity handles references to scripts inside a DLL compared to regular script files.</p>
 </blockquote>
 <ul>
-<li>Replaced PDF user manual with a website hosted at <a href="https://kybernetik.com.au/ultevents">kybernetik.com.au/ultevents</a>.</li>
+<li>Replaced PDF user manual with a website hosted at kybernetik.com.au/ultevents.</li>
 <li>Added support for constructors.</li>
 <li>Added interfaces corresponding to all <code><a href="/ultevents/api/UltEvents/UltEvent">UltEvent</a></code> types so that the ability to add and remove listeners can be exposed without exposing the ability to invoke, clear, or access other members of the event.</li>
 <li>Fixed cached <code><a href="/ultevents/api/UltEvents/PersistentArgument">PersistentArgument</a></code> values to be cleared properly when the user modifies the argument in the Inspector.</li>

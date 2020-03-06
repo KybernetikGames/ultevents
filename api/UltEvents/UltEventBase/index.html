@@ -57,7 +57,7 @@
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
                                     <li><a href="/ultevents/docs"><img src="/ultevents/images/docs.png" height="20" style="position:relative; left:-5px; top:-1px;"> Docs</a></li>
-        <li class="active"><a href="/ultevents/api/UltEvents"><img src="/ultevents/images/api.png" height="20" style="position:relative; left:-3px; top:-1px;"> API v2.0</a></li>
+        <li class="active"><a href="/ultevents/api/UltEvents"><img src="/ultevents/images/api.png" height="20" style="position:relative; left:-3px; top:-1px;"> API v2.1</a></li>
         <li><a href="https://forum.unity.com/threads/687970"><img src="/ultevents/images/forum.png" height="20" style="position:relative; left:-4px; top:-1px;"> Forum</a></li>
         <li><a href="mailto:mail@kybernetik.com.au?subject=UltEvents"><img src="/ultevents/images/contact.png" height="20" style="position:relative; left:-4px; top:-1px;"> Contact</a></li>
         <li><a href="https://assetstore.unity.com/packages/tools/gui/ultevents-111307?aid=1100l8ah5"><img src="/ultevents/images/unity-logo.png" height="20" style="position:relative; left:-4px; top:-1px;"> Download</a></li>
@@ -229,11 +229,11 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/ultevents/api/UltEvents/UltEvent_4">UltEvent</a><wbr>&lt;<a href="/ultevents/api/UltEvents/UltEvent_4#typeparam-T0">T0</a>, <wbr><a href="/ultevents/api/UltEvents/UltEvent_4#typeparam-T1">T1</a>, <wbr><a href="/ultevents/api/UltEvents/UltEvent_4#typeparam-T2">T2</a>, <wbr><a href="/ultevents/api/UltEvents/UltEvent_4#typeparam-T3">T3</a>&gt;<wbr></li>								
 											<li><a href="/ultevents/api/UltEvents/UltEvent">UltEvent</a></li>								
 											<li><a href="/ultevents/api/UltEvents/UltEvent_1">UltEvent</a><wbr>&lt;<a href="/ultevents/api/UltEvents/UltEvent_1#typeparam-T0">T0</a>&gt;<wbr></li>								
-											<li><a href="/ultevents/api/UltEvents/UltEvent_3">UltEvent</a><wbr>&lt;<a href="/ultevents/api/UltEvents/UltEvent_3#typeparam-T0">T0</a>, <wbr><a href="/ultevents/api/UltEvents/UltEvent_3#typeparam-T1">T1</a>, <wbr><a href="/ultevents/api/UltEvents/UltEvent_3#typeparam-T2">T2</a>&gt;<wbr></li>								
+											<li><a href="/ultevents/api/UltEvents/UltEvent_4">UltEvent</a><wbr>&lt;<a href="/ultevents/api/UltEvents/UltEvent_4#typeparam-T0">T0</a>, <wbr><a href="/ultevents/api/UltEvents/UltEvent_4#typeparam-T1">T1</a>, <wbr><a href="/ultevents/api/UltEvents/UltEvent_4#typeparam-T2">T2</a>, <wbr><a href="/ultevents/api/UltEvents/UltEvent_4#typeparam-T3">T3</a>&gt;<wbr></li>								
 											<li><a href="/ultevents/api/UltEvents/UltEvent_2">UltEvent</a><wbr>&lt;<a href="/ultevents/api/UltEvents/UltEvent_2#typeparam-T0">T0</a>, <wbr><a href="/ultevents/api/UltEvents/UltEvent_2#typeparam-T1">T1</a>&gt;<wbr></li>								
+											<li><a href="/ultevents/api/UltEvents/UltEvent_3">UltEvent</a><wbr>&lt;<a href="/ultevents/api/UltEvents/UltEvent_3#typeparam-T0">T0</a>, <wbr><a href="/ultevents/api/UltEvents/UltEvent_3#typeparam-T1">T1</a>, <wbr><a href="/ultevents/api/UltEvents/UltEvent_3#typeparam-T2">T2</a>&gt;<wbr></li>								
 									</ul>
 								</dd>			
 							
@@ -247,16 +247,16 @@
 	click Interface0 "/ultevents/api/UltEvents/IUltEventBase"
 	Type["UltEventBase"]
 class Type type-node
-	Derived0["UltEvent&lt;T0, T1, T2, T3&gt;"]--&gt;Type
-	click Derived0 "/ultevents/api/UltEvents/UltEvent_4"
-	Derived1["UltEvent"]--&gt;Type
-	click Derived1 "/ultevents/api/UltEvents/UltEvent"
-	Derived2["UltEvent&lt;T0&gt;"]--&gt;Type
-	click Derived2 "/ultevents/api/UltEvents/UltEvent_1"
-	Derived3["UltEvent&lt;T0, T1, T2&gt;"]--&gt;Type
-	click Derived3 "/ultevents/api/UltEvents/UltEvent_3"
-	Derived4["UltEvent&lt;T0, T1&gt;"]--&gt;Type
-	click Derived4 "/ultevents/api/UltEvents/UltEvent_2"
+	Derived0["UltEvent"]--&gt;Type
+	click Derived0 "/ultevents/api/UltEvents/UltEvent"
+	Derived1["UltEvent&lt;T0&gt;"]--&gt;Type
+	click Derived1 "/ultevents/api/UltEvents/UltEvent_1"
+	Derived2["UltEvent&lt;T0, T1, T2, T3&gt;"]--&gt;Type
+	click Derived2 "/ultevents/api/UltEvents/UltEvent_4"
+	Derived3["UltEvent&lt;T0, T1&gt;"]--&gt;Type
+	click Derived3 "/ultevents/api/UltEvents/UltEvent_2"
+	Derived4["UltEvent&lt;T0, T1, T2&gt;"]--&gt;Type
+	click Derived4 "/ultevents/api/UltEvents/UltEvent_3"
 
 						</div>
 					</div>
@@ -324,6 +324,13 @@ public abstract class UltEventBase : IUltEventBase</code></pre>
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/ultevents/api/UltEvents/UltEventBase/58C3D653">ParameterCount</a></td>
+								<td>int</td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/ultevents/api/UltEvents/UltEventBase/0A0E3F8F">ParameterTypes</a></td>
 								<td>Type[]</td>
 								<td>
@@ -368,7 +375,7 @@ public abstract class UltEventBase : IUltEventBase</code></pre>
 								<td><a href="/ultevents/api/UltEvents/UltEventBase/1E3F6775">AddPersistentCall<wbr>&lt;T&gt;<wbr><wbr>(T, <wbr>Action)<wbr></a></td>
 								<td><a href="/ultevents/api/UltEvents/PersistentCall">PersistentCall</a></td>
 								<td>
-									<div>Ensures that 'e' isn't null and adds 'method' to its <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code>.</div>
+									<div>Ensures that `e` isn't null and adds `method` to its <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code>.</div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -376,7 +383,7 @@ public abstract class UltEventBase : IUltEventBase</code></pre>
 								<td><a href="/ultevents/api/UltEvents/UltEventBase/9ACABADA">AddPersistentCall<wbr>&lt;T&gt;<wbr><wbr>(T, <wbr>Delegate)<wbr></a></td>
 								<td><a href="/ultevents/api/UltEvents/PersistentCall">PersistentCall</a></td>
 								<td>
-									<div>Ensures that 'e' isn't null and adds 'method' to its <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code>.</div>
+									<div>Ensures that `e` isn't null and adds `method` to its <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code>.</div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -385,7 +392,17 @@ public abstract class UltEventBase : IUltEventBase</code></pre>
 								<td>void</td>
 								<td>
 									<div>
-    Sets the number of parameters passed to this event.
+    Stores the `parameter` so it can be accessed by <code class="cs">UltEvents.PersistentCall</code>s.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/ultevents/api/UltEvents/UltEventBase/226587D2">CacheParameters<wbr>(Object[])<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Stores the `parameters` so they can be accessed by <code class="cs">UltEvents.PersistentCall</code>s.
     </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -403,14 +420,23 @@ public abstract class UltEventBase : IUltEventBase</code></pre>
 								<td><a href="/ultevents/api/UltEvents/UltEventBase/C54F393A">CopyFrom<wbr>(UltEventBase)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div>Copies the contents of this the 'target' event to this event.</div>
+									<div>Copies the contents of this the `target` event to this event.</div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/ultevents/api/UltEvents/UltEventBase/C0B8E568">DynamicInvoke<wbr>(Object[])<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Invokes all <code class="cs">PersistentCalls</code> then all <code class="cs">DynamicCalls</code>.
+    </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/ultevents/api/UltEvents/UltEventBase/A92FD671">Invoke<wbr>Persistent<wbr>Calls<wbr>()<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div>Invokes all <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code> registered to this event.</div>
+									<div>Invokes all <code class="cs">UltEvents.PersistentCall</code>s registered to this event.</div>
 								</td>
 							</tr>
 							<tr>
@@ -435,7 +461,7 @@ public abstract class UltEventBase : IUltEventBase</code></pre>
 								<td><a href="/ultevents/api/UltEvents/UltEventBase/5416CCFA">RemovePersistentCall<wbr>(UltEventBase, <wbr>Action)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div>If 'e' isn't null, this method removes 'method' from its <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code>.</div>
+									<div>If `e` isn't null, this method removes `method` from its <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code>.</div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -443,7 +469,7 @@ public abstract class UltEventBase : IUltEventBase</code></pre>
 								<td><a href="/ultevents/api/UltEvents/UltEventBase/D27A9E92">RemovePersistentCall<wbr>(UltEventBase, <wbr>Delegate)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div>If 'e' isn't null, this method removes 'method' from its <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code>.</div>
+									<div>If `e` isn't null, this method removes `method` from its <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code>.</div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
