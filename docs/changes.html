@@ -57,12 +57,12 @@
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
                                     <li class="active"><a href="/ultevents/docs"><img src="/ultevents/images/docs.png" height="20" style="position:relative; left:-5px; top:-1px;"> Docs</a></li>
-        <li><a href="/ultevents/api/UltEvents"><img src="/ultevents/images/api.png" height="20" style="position:relative; left:-3px; top:-1px;"> API v2.2</a></li>
+        <li><a href="/ultevents/api/UltEvents"><img src="/ultevents/images/api.png" height="20" style="position:relative; left:-3px; top:-1px;"> API v3.0</a></li>
         <li><a href="https://forum.unity.com/threads/687970"><img src="/ultevents/images/forum.png" height="20" style="position:relative; left:-4px; top:-1px;"> Forum</a></li>
-        <li><a href="mailto:mail@kybernetik.com.au?subject=UltEvents"><img src="/ultevents/images/contact.png" height="20" style="position:relative; left:-4px; top:-1px;"> Contact</a></li>
         <li><a href="https://kybernetik.itch.io/ultevents"><img src="/ultevents/images/itch.png" height="20" style="position:relative; left:-4px; top:-1px;"> Itch</a></li>
         <li><a href="https://assetstore.unity.com/packages/tools/gui/ultevents-111307?aid=1100l8ah5"><img src="/ultevents/images/unity-logo.png" height="20" style="position:relative; left:-4px; top:-1px;"> Asset Store</a></li>
         <li><a href="https://kybernetik.com.au"><img src="/ultevents/images/kybernetik.png" height="20" style="position:relative; left:-2px; top:-1px;"> Other Assets</a></li>
+        <li><a href="https://ko-fi.com/Z8Z2SSXSN"><img src="/ultevents/images/kofi.png" height="20" style="position:relative; left:-2px; top:-1px;"> Donate</a></li>
  
                         </ul>       
                     </div>
@@ -76,7 +76,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#ultevents-2.2">UltEvents 2.2</a></p>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#ultevents-3.0">UltEvents 3.0</a></p>
+<p><a href="#ultevents-2.2">UltEvents 2.2</a></p>
 <p><a href="#ultevents-2.1">UltEvents 2.1</a></p>
 <p><a href="#ultevents-2.0">UltEvents 2.0</a></p>
 <p><a href="#ultevents-1.2">UltEvents 1.2</a></p>
@@ -94,9 +95,19 @@
                         
 
                 <li><a href="/ultevents/docs/ult-vs-unity">UltEvents vs. UnityEvents</a></li>
-                <li><a href="/ultevents/docs/creating-and-triggering">Creating and Triggering</a></li>
-                <li><a href="/ultevents/docs/inspector-configuration">Inspector Configuration</a></li>
-                <li><a href="/ultevents/docs/advanced">Advanced</a></li>
+                <li><a href="/ultevents/docs/usage">Usage</a></li>
+                <li><a href="/ultevents/docs/event-parameters">Event Parameters</a></li>
+                <li><a href="/ultevents/docs/linked-return-values">Linked Return Values</a></li>
+                <li><a href="/ultevents/docs/premade-event-scripts">Premade Event Scripts</a></li>
+                <li class="treeview">
+                    <a href="/ultevents/docs/other">Other Features</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/ultevents/docs/other/context-menus">Context Menus</a></li>
+                <li><a href="/ultevents/docs/other/configuring-in-code">Configuring Events in Code</a></li>
+
+                    </ul>
+                </li>
                 <li class="selected"><a href="/ultevents/docs/changes">Change Log</a></li>
 
                     </ul>
@@ -117,6 +128,46 @@
 		<blockquote class="blockquote">
 <p>When updating plugins, you must delete any previous version from your project first. This is mandatory since Unity's package importer system doesn't delete or rename existing files so any old scripts that aren't directly overwritten will cause compile errors that prevent anything from working.</p>
 </blockquote>
+<h1 id="ultevents-3.0">UltEvents 3.0</h1>
+<ul>
+<li>2024-01-01</li>
+<li>Features:
+<ul>
+<li>Added support for getting and setting fields directly.</li>
+<li>Replaced the method selection menu with an <code>AdvancedDropdown</code> which has a nicer layout and inbuilt search bar.
+<ul>
+<li>The old context menu style can be reactivated by selecting "Display Options -&gt; Context Menu Style".</li>
+</ul>
+</li>
+<li>Added <code><a href="/ultevents/api/UltEvents/Operators">Operators</a></code> for simple math.</li>
+<li>Added <code><a href="/ultevents/api/UltEvents/ReflectionCache">ReflectionCache</a></code> for more efficient initialization of events that reuse the same types for static member access.</li>
+<li>Removed the <code>UltEventsUtils.InvokeX</code> extension methods since you can just use <code>ultEvent?.Invoke();</code>.</li>
+<li>Improved the UltEvent Inspector to highlight the event header in red if any of its calls are invalid so you can find problems easier if they're collapsed.</li>
+<li>Improved the "Attempted to Invoke a PersistentCall which couldn't find it's method" warning to include the name of the method it was looking for and mention Unity's <a href="https://docs.unity3d.com/Manual/ManagedCodeStripping.html">Script Stripping</a> in Runtime Builds.</li>
+</ul>
+</li>
+<li>Housekeeping:
+<ul>
+<li>Increased the minimum supported Unity version to 2021.3.</li>
+<li>Moved from Assets/Plugins to the Packages folder so UltEvents can be referenced by other Packages.
+<ul>
+<li>Renamed the Assembly from <code>UltEvents</code> to <code>Kybernetik.UltEvents</code> to match package assembly naming guidelines.</li>
+<li>If you have any Assembly Definitions which reference a previous version of <code>UltEvents</code>, make sure they have "Use GUIDs" enabled before upgrading. Otherwise, you will need to re-assign those references.</li>
+<li>Added a separate <code>Kybernetik.UltEvents.Editor</code> assembly for Editor-Only stuff.</li>
+</ul>
+</li>
+<li>Updated code to use newer C# features: expression-bodied members, null-coalescing operators, out parameter declarations, range operators, string interpolation.</li>
+</ul>
+</li>
+<li>Fixes:
+<ul>
+<li>Fixed <code><a href="/ultevents/api/UltEvents.Editor/Serialization">Serialization</a></code> system to better handle <code>[SerializeReference]</code> fields.</li>
+<li>Fixed <code>MethodSelectionMenu</code> headings to respect <code>BoolPref.ShowFullTypeNames</code>.</li>
+<li>Fixed call reordering to not break linked return values.</li>
+<li>Fixed constructors to work properly.</li>
+</ul>
+</li>
+</ul>
 <h1 id="ultevents-2.2">UltEvents 2.2</h1>
 <ul>
 <li>2021-08-20</li>
@@ -128,7 +179,7 @@
 <li>Added support for inheritance in <code>[SerializeReference]</code> to the <code><a href="/ultevents/api/UltEvents.Editor/Serialization">Serialization</a></code> system.</li>
 <li>Added <code>Serialization.CopyValueFrom</code>.</li>
 <li>Added <code>IsDefaultValueByType</code> and <code>ResetValue</code>.</li>
-<li>Renamed <code>ArrayPropertyAccessor</code> to <code>CollectionPropertyAccessor</code> and added methods for accessing the collection itself rather than the target item.</li>
+<li>Renamed <code>ArrayPropertyAccessor</code> to <code><a href="/ultevents/api/UltEvents.Editor/CollectionPropertyAccessor">CollectionPropertyAccessor</a></code> and added methods for accessing the collection itself rather than the target item.</li>
 <li>Fixed errors when trying to get or set the value of a property with a null object somewhere in its chain.</li>
 <li>Fixed <code>Serialization.GetValue</code> to work properly when the property has multiple different values.</li>
 <li>Fixed <code>Serialization.PropertyAccessor.ResetValue</code> to run the constructor of the field's current type so that it can reset <code>[SerializeReference]</code> fields to the defaults of the current type instead of null.</li>
@@ -220,6 +271,14 @@
 <p>Other Assets</p>
 <p><a href="/animancer">Animancer</a></p>
 <p><a href="/inspector-gadgets">Inspector Gadgets</a></p>
+</div>
+
+<div style="width:10%"></div>
+
+<div>
+<p>&nbsp;</p>
+<p><a href="/flexi-motion">FlexiMotion</a></p>
+<p><a href="/weaver">Weaver</a></p>
 </div>
 
 </div></strong>

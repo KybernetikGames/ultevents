@@ -57,12 +57,12 @@
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
                                     <li class="active"><a href="/ultevents/docs"><img src="/ultevents/images/docs.png" height="20" style="position:relative; left:-5px; top:-1px;"> Docs</a></li>
-        <li><a href="/ultevents/api/UltEvents"><img src="/ultevents/images/api.png" height="20" style="position:relative; left:-3px; top:-1px;"> API v2.2</a></li>
+        <li><a href="/ultevents/api/UltEvents"><img src="/ultevents/images/api.png" height="20" style="position:relative; left:-3px; top:-1px;"> API v3.0</a></li>
         <li><a href="https://forum.unity.com/threads/687970"><img src="/ultevents/images/forum.png" height="20" style="position:relative; left:-4px; top:-1px;"> Forum</a></li>
-        <li><a href="mailto:mail@kybernetik.com.au?subject=UltEvents"><img src="/ultevents/images/contact.png" height="20" style="position:relative; left:-4px; top:-1px;"> Contact</a></li>
         <li><a href="https://kybernetik.itch.io/ultevents"><img src="/ultevents/images/itch.png" height="20" style="position:relative; left:-4px; top:-1px;"> Itch</a></li>
         <li><a href="https://assetstore.unity.com/packages/tools/gui/ultevents-111307?aid=1100l8ah5"><img src="/ultevents/images/unity-logo.png" height="20" style="position:relative; left:-4px; top:-1px;"> Asset Store</a></li>
         <li><a href="https://kybernetik.com.au"><img src="/ultevents/images/kybernetik.png" height="20" style="position:relative; left:-2px; top:-1px;"> Other Assets</a></li>
+        <li><a href="https://ko-fi.com/Z8Z2SSXSN"><img src="/ultevents/images/kofi.png" height="20" style="position:relative; left:-2px; top:-1px;"> Donate</a></li>
  
                         </ul>       
                     </div>
@@ -89,9 +89,19 @@
                         
 
                 <li class="selected"><a href="/ultevents/docs/ult-vs-unity">UltEvents vs. UnityEvents</a></li>
-                <li><a href="/ultevents/docs/creating-and-triggering">Creating and Triggering</a></li>
-                <li><a href="/ultevents/docs/inspector-configuration">Inspector Configuration</a></li>
-                <li><a href="/ultevents/docs/advanced">Advanced</a></li>
+                <li><a href="/ultevents/docs/usage">Usage</a></li>
+                <li><a href="/ultevents/docs/event-parameters">Event Parameters</a></li>
+                <li><a href="/ultevents/docs/linked-return-values">Linked Return Values</a></li>
+                <li><a href="/ultevents/docs/premade-event-scripts">Premade Event Scripts</a></li>
+                <li class="treeview">
+                    <a href="/ultevents/docs/other">Other Features</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/ultevents/docs/other/context-menus">Context Menus</a></li>
+                <li><a href="/ultevents/docs/other/configuring-in-code">Configuring Events in Code</a></li>
+
+                    </ul>
+                </li>
                 <li><a href="/ultevents/docs/changes">Change Log</a></li>
 
                     </ul>
@@ -168,23 +178,25 @@ summary
   
   <tr><td>Persistent listeners (serialized)</td><td class="y"></td><td class="y"></td></tr>
   <tr><td>Dynamic listeners (non-serialized)</td><td class="y"></td><td class="y"></td></tr>
+  <tr><td>Call methods with 0 or 1 parameter</td><td class="y"></td><td class="y"></td></tr>
+  <tr><td>Call methods with any number of parameters</td><td class="n"></td><td class="y"></td></tr>
   <tr><td>Parameter types: bool, int, float, string, UnityEngine.Object</td><td class="y"></td><td class="y"></td></tr>
   <tr><td>Parameter types: Enum (regular and flags), Vector (2, 3, 4), Quaternion, Rect, Color, Color32</td><td class="n"></td><td class="y"></td></tr>
-  <tr><td>Unlimited parameter count</td><td class="n"><a href="#parameter-count">[1]</a></td><td class="y"></td></tr>
-  <tr><td>Allows methods with non-void return types</td><td class="n"></td><td class="y"></td></tr>
-  <tr><td>Use values returned from earlier calls as parameters</td><td class="n"></td><td class="y"></td></tr>
-  <tr><td>Public methods</td><td class="y"></td><td class="y"></td></tr>
-  <tr><td>Non-public methods</td><td class="n"></td><td class="y"></td></tr>
-  <tr><td>Static methods</td><td class="n"></td><td class="y"></td></tr>
+  <tr><td>Call methods with non-void return types</td><td class="n"></td><td class="y"></td></tr>
+  <tr><td>Use returned values as parameters in subsequent calls</td><td class="n"></td><td class="y"></td></tr>
+  <tr><td>Call public methods</td><td class="y"></td><td class="y"></td></tr>
+  <tr><td>Call non-public methods</td><td class="n"></td><td class="y"></td></tr>
+  <tr><td>Call static methods</td><td class="n"></td><td class="y"></td></tr>
+  <tr><td>Get and Set fields directly</td><td class="n"></td><td class="y"></td></tr>
   <tr><td>Source code included</td><td class="n"></td><td class="y"></td></tr>
-  <tr><td>Disable specific listeners entirely or just in Edit Mode</td><td class="y"></td><td class="n"><a href="#call-state">[2]</a></td></tr>
+  <tr><td>Disable specific listeners entirely or just in Edit Mode</td><td class="y"></td><td class="n"><a href="#call-state">[1]</a></td></tr>
   <tr class="section"><td colspan="3">User Interface</td></tr>
   
+  <tr><td>Searchable menu for method selection</td><td class="n"></td><td class="y"></td></tr>
   <tr><td>Compact and collapsible GUI</td><td class="n"></td><td class="y"></td></tr>
   <tr><td>Parameterless functions only take a single line</td><td class="n"></td><td class="y"></td></tr>
   <tr><td>Function parameter names are displayed</td><td class="n"></td><td class="y"></td></tr>
   <tr><td>Customizable display options</td><td class="n"></td><td class="y"></td></tr>
-  <tr><td>Reorderable function list</td><td class="n"></td><td class="y"></td></tr>
   <tr><td>Keyboard shortcuts (Copy, Paste, Add, Delete)</td><td class="n"></td><td class="y"></td></tr>
   <tr><td>Context menu commands (Invoke, Clear, Copy, Paste)</td><td class="n"></td><td class="y"></td></tr>
   <tr><td>Select a specific component when there are multiple of the same type</td><td class="n"></td><td class="y"></td></tr>
@@ -193,8 +205,7 @@ summary
   
   </tbody>
 </table>
-<p id="parameter-count">[1] <code>UnityEvent</code>s only support methods with 0 or 1 parameters while <code><a href="/ultevents/api/UltEvents/UltEvent">UltEvent</a></code>s can call methods with any number of parameters.</p>
-<p id="call-state">[2] <code>UnityEvent</code>s have a dropdown menu for each persistent listener to select when it should be executed. The default is <code>Runtime Only</code> which will skip that listener if the event is invoked in Edit Mode in the Unity Editor. <code>Off</code> can also be used to disable that listener entirely. In the development of <code><a href="/ultevents/api/UltEvents/UltEvent">UltEvent</a></code>s this feature was deemed to not be particularly useful so it was not implemented to avoid it's (admittedly very minor) performance cost. If you don't want an event to be triggered in Edit Mode, then don't trigger it.</p>
+<p id="call-state">[1] <code>UnityEvent</code>s have a dropdown menu for each persistent listener to select when it should be executed. The default is <code>Runtime Only</code> which will skip that listener if the event is invoked in Edit Mode in the Unity Editor. <code>Off</code> can also be used to disable that listener entirely. In the development of <code><a href="/ultevents/api/UltEvents/UltEvent">UltEvent</a></code>s this feature was deemed to not be particularly useful so it was skipped to avoid it's implementation/maintenance/performance cost.</p>
 <h1 id="performance">Performance</h1>
 <ul>
 <li><code><a href="/ultevents/api/UltEvents/UltEvent">UltEvent</a></code>s and <code>UnityEvent</code>s both have significantly worse performance than regular <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/">C# Delegates</a> like <code>System.Action</code>. If you only want an event that can be used in code without wanting to set it up in the Inspector or save it as part of a scene/prefab, then you should simply use regular delegates.</li>
@@ -245,6 +256,14 @@ summary
 <p>Other Assets</p>
 <p><a href="/animancer">Animancer</a></p>
 <p><a href="/inspector-gadgets">Inspector Gadgets</a></p>
+</div>
+
+<div style="width:10%"></div>
+
+<div>
+<p>&nbsp;</p>
+<p><a href="/flexi-motion">FlexiMotion</a></p>
+<p><a href="/weaver">Weaver</a></p>
 </div>
 
 </div></strong>

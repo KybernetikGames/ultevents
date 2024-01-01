@@ -57,12 +57,12 @@
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
                                     <li><a href="/ultevents/docs"><img src="/ultevents/images/docs.png" height="20" style="position:relative; left:-5px; top:-1px;"> Docs</a></li>
-        <li class="active"><a href="/ultevents/api/UltEvents"><img src="/ultevents/images/api.png" height="20" style="position:relative; left:-3px; top:-1px;"> API v2.2</a></li>
+        <li class="active"><a href="/ultevents/api/UltEvents"><img src="/ultevents/images/api.png" height="20" style="position:relative; left:-3px; top:-1px;"> API v3.0</a></li>
         <li><a href="https://forum.unity.com/threads/687970"><img src="/ultevents/images/forum.png" height="20" style="position:relative; left:-4px; top:-1px;"> Forum</a></li>
-        <li><a href="mailto:mail@kybernetik.com.au?subject=UltEvents"><img src="/ultevents/images/contact.png" height="20" style="position:relative; left:-4px; top:-1px;"> Contact</a></li>
         <li><a href="https://kybernetik.itch.io/ultevents"><img src="/ultevents/images/itch.png" height="20" style="position:relative; left:-4px; top:-1px;"> Itch</a></li>
         <li><a href="https://assetstore.unity.com/packages/tools/gui/ultevents-111307?aid=1100l8ah5"><img src="/ultevents/images/unity-logo.png" height="20" style="position:relative; left:-4px; top:-1px;"> Asset Store</a></li>
         <li><a href="https://kybernetik.com.au"><img src="/ultevents/images/kybernetik.png" height="20" style="position:relative; left:-2px; top:-1px;"> Other Assets</a></li>
+        <li><a href="https://ko-fi.com/Z8Z2SSXSN"><img src="/ultevents/images/kofi.png" height="20" style="position:relative; left:-2px; top:-1px;"> Donate</a></li>
  
                         </ul>       
                     </div>
@@ -151,8 +151,10 @@
 				<li><a href="/ultevents/api/UltEvents/CollisionEvents3D">CollisionEvents3D</a></li>
 				<li><a href="/ultevents/api/UltEvents/DelayedUltEventHolder">Delayed<wbr>Ult<wbr>Event<wbr>Holder</a></li>
 				<li><a href="/ultevents/api/UltEvents/LifeCycleEvents">LifeCycleEvents</a></li>
+				<li><a href="/ultevents/api/UltEvents/Operators">Operators</a></li>
 				<li><a href="/ultevents/api/UltEvents/PersistentArgument">PersistentArgument</a></li>
 				<li><a href="/ultevents/api/UltEvents/PersistentCall">PersistentCall</a></li>
+				<li><a href="/ultevents/api/UltEvents/ReflectionCache">ReflectionCache</a></li>
 				<li><a href="/ultevents/api/UltEvents/TriggerEvent2D">TriggerEvent2D</a></li>
 				<li><a href="/ultevents/api/UltEvents/TriggerEvent3D">TriggerEvent3D</a></li>
 				<li><a href="/ultevents/api/UltEvents/TriggerEvents2D">TriggerEvents2D</a></li>
@@ -175,6 +177,8 @@
 				<li><a href="/ultevents/api/UltEvents/IUltEvent_3">IUltEvent<wbr>&lt;T0, <wbr>T1, <wbr>T2&gt;<wbr></a></li>
 				<li><a href="/ultevents/api/UltEvents/IUltEvent_4">IUltEvent<wbr>&lt;T0, <wbr>T1, <wbr>T2, <wbr>T3&gt;<wbr></a></li>
 				<li><a href="/ultevents/api/UltEvents/IUltEventBase">IUltEventBase</a></li>
+			<li class="header">Struct Types</li>
+				<li><a href="/ultevents/api/UltEvents/SimpleTimer">SimpleTimer</a></li>
 
 
                     </ul>
@@ -331,9 +335,7 @@ class Type type-node
 								<td><a href="/ultevents/api/UltEvents/UltEventUtils/956737A3">Append<wbr>Name<wbr>And<wbr>Generic<wbr>Arguments<wbr>(StringBuilder, <wbr>Type, <wbr>bool, <wbr>int)<wbr></a></td>
 								<td>int</td>
 								<td>
-									<div>
-    Appends the generic arguments of `type` (after skipping the specified number).
-    </div>
+									<div>Appends the generic arguments of `type` (after skipping the specified number).</div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -341,13 +343,7 @@ class Type type-node
 								<td><a href="/ultevents/api/UltEvents/UltEventUtils/5E38E728">AppendNameCS<wbr>(StringBuilder, <wbr>MemberInfo, <wbr>bool)<wbr></a></td>
 								<td>StringBuilder</td>
 								<td>
-									<div>
-    Appends the full name of a `member` as it would appear in C# code.
-    <p></p>
-    For example, passing this method info in as its own parameter would append "<code class="cs">UltEvents.UltEventUtils</code>.AppendName".
-    <p></p>
-    Note that when `member` is a <code class="cs">System.Type</code>, this method calls <code class="cs">UltEvents.UltEventUtils.GetNameCS(System.Type,System.Boolean)</code> instead.
-    </div>
+									<div>Appends the full name of a `member` as it would appear in C# code.</div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -394,10 +390,10 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/ultevents/api/UltEvents/UltEventUtils/16B42A13">Get<wbr>Fully<wbr>Qualified<wbr>Name<wbr>(MethodBase)<wbr></a></td>
+								<td><a href="/ultevents/api/UltEvents/UltEventUtils/6A4AC73C">Get<wbr>Fully<wbr>Qualified<wbr>Name<wbr>(MemberInfo)<wbr></a></td>
 								<td>string</td>
 								<td>
-									<div>Returns "AssemblyQualifiedName.MethodName".</div>
+									<div>Returns "AssemblyQualifiedName.MemberName".</div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -405,13 +401,7 @@ class Type type-node
 								<td><a href="/ultevents/api/UltEvents/UltEventUtils/5F70926D">GetNameCS<wbr>(MemberInfo, <wbr>bool)<wbr></a></td>
 								<td>string</td>
 								<td>
-									<div>
-    Returns the full name of a `member` as it would appear in C# code.
-    <p></p>
-    For example, passing this method info in as its own parameter would return "<code class="cs">UltEvents.UltEventUtils</code>.GetNameCS".
-    <p></p>
-    Note that when `member` is a <code class="cs">System.Type</code>, this method calls <code class="cs">UltEvents.UltEventUtils.GetNameCS(System.Type,System.Boolean)</code> instead.
-    </div>
+									<div>Returns the full name of a `member` as it would appear in C# code.</div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -419,17 +409,7 @@ class Type type-node
 								<td><a href="/ultevents/api/UltEvents/UltEventUtils/D5E23638">GetNameCS<wbr>(Type, <wbr>bool)<wbr></a></td>
 								<td>string</td>
 								<td>
-									<div>
-    Returns the name of a `type` as it would appear in C# code.
-    <p></p>
-    For example, typeof(List&lt;float&gt;).FullName would give you:
-    System.Collections.Generic.List`1[[System.Single, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
-    <p></p>
-    This method would instead return System.Collections.Generic.List&lt;float&gt; if `fullName` is true, or
-    just List&lt;float&gt; if it is false.
-    <p></p>
-    Note that all returned values are stored in a dictionary to speed up repeated use.
-    </div>
+									<div>Returns the name of a `type` as it would appear in C# code.</div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -444,72 +424,23 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/ultevents/api/UltEvents/UltEventUtils/A3470DF7">GetReturnType<wbr>(MemberInfo)<wbr></a></td>
+								<td>Type</td>
+								<td>
+									<div>
+    Returns the <code class="cs">System.Reflection.MemberInfo.DeclaringType</code> for constructors or <code class="cs">System.Reflection.MethodInfo.ReturnType</code>
+    for regular methods or <code class="cs">System.Reflection.FieldInfo.FieldType</code> for fields.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/ultevents/api/UltEvents/UltEventUtils/DFB9E0D8">GetReturnType<wbr>(MethodBase)<wbr></a></td>
 								<td>Type</td>
 								<td>
 									<div>
     Returns the <code class="cs">System.Reflection.MemberInfo.DeclaringType</code> for constructors or <code class="cs">System.Reflection.MethodInfo.ReturnType</code>
     for regular methods.
-    </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/ultevents/api/UltEvents/UltEventUtils/D2FBA1AC">InvokeX<wbr>(UltEvent)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Calls e.Invoke if it isn't null.
-    <p></p>
-    See also:  and .
-    </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/ultevents/api/UltEvents/UltEventUtils/802F3FFF">InvokeX<wbr>&lt;T0, <wbr>T1, <wbr>T2, <wbr>T3&gt;<wbr><wbr>(UltEvent<wbr>&lt;T0, <wbr>T1, <wbr>T2, <wbr>T3&gt;<wbr>, <wbr>T0, <wbr>T1, <wbr>T2, <wbr>T3)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Calls e.Invoke if it isn't null.
-    <p></p>
-    See also:  and .
-    </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/ultevents/api/UltEvents/UltEventUtils/C02C2E01">InvokeX<wbr>&lt;T0, <wbr>T1, <wbr>T2&gt;<wbr><wbr>(UltEvent<wbr>&lt;T0, <wbr>T1, <wbr>T2&gt;<wbr>, <wbr>T0, <wbr>T1, <wbr>T2)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Calls e.Invoke if it isn't null.
-    <p></p>
-    See also:  and .
-    </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/ultevents/api/UltEvents/UltEventUtils/84D56A66">InvokeX<wbr>&lt;T0, <wbr>T1&gt;<wbr><wbr>(UltEvent<wbr>&lt;T0, <wbr>T1&gt;<wbr>, <wbr>T0, <wbr>T1)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Calls e.Invoke if it isn't null.
-    <p></p>
-    See also:  and .
-    </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/ultevents/api/UltEvents/UltEventUtils/092A7626">InvokeX<wbr>&lt;T0&gt;<wbr><wbr>(UltEvent<wbr>&lt;T0&gt;<wbr>, <wbr>T0)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Calls e.Invoke if it isn't null.
-    <p></p>
-    See also:  and .
     </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -555,7 +486,47 @@ class Type type-node
         </div>
         <div class="wrapper bottom-wrapper">
             <footer class="bottom-footer">
-                Generated by <a href="https://wyam.io">Wyam</a>
+                <strong><div style="text-align:left; display:flex">
+
+<div>
+<p>Documentation</p>
+<p><a href="/ultevents/docs">Documentation</a></p>
+<p><a href="/ultevents/docs/changes">Change Log</a></p>
+</div>
+
+<div style="width:10%"></div>
+
+<div>
+<p>Download</p>
+<p><a href="https://kybernetik.itch.io/ultevents">Itch.io (Recommended)</a></p>
+<p><a href="https://assetstore.unity.com/packages/tools/gui/ultevents-111307?aid=1100l8ah5">Asset Store</a></p>
+</div>
+
+<div style="width:10%"></div>
+
+<div>
+<p>Contact</p>
+<p><a href="https://forum.unity.com/threads/687970">Unity Forum</a></p>
+<p><a href="mailto:mail@kybernetik.com.au?subject=UltEvents">Email</a></p>
+</div>
+
+<div style="width:10%"></div>
+
+<div>
+<p>Other Assets</p>
+<p><a href="/animancer">Animancer</a></p>
+<p><a href="/inspector-gadgets">Inspector Gadgets</a></p>
+</div>
+
+<div style="width:10%"></div>
+
+<div>
+<p>&nbsp;</p>
+<p><a href="/flexi-motion">FlexiMotion</a></p>
+<p><a href="/weaver">Weaver</a></p>
+</div>
+
+</div></strong>
             </footer>
         </div>
         <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>

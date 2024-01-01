@@ -57,12 +57,12 @@
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
                                     <li><a href="/ultevents/docs"><img src="/ultevents/images/docs.png" height="20" style="position:relative; left:-5px; top:-1px;"> Docs</a></li>
-        <li class="active"><a href="/ultevents/api/UltEvents"><img src="/ultevents/images/api.png" height="20" style="position:relative; left:-3px; top:-1px;"> API v2.2</a></li>
+        <li class="active"><a href="/ultevents/api/UltEvents"><img src="/ultevents/images/api.png" height="20" style="position:relative; left:-3px; top:-1px;"> API v3.0</a></li>
         <li><a href="https://forum.unity.com/threads/687970"><img src="/ultevents/images/forum.png" height="20" style="position:relative; left:-4px; top:-1px;"> Forum</a></li>
-        <li><a href="mailto:mail@kybernetik.com.au?subject=UltEvents"><img src="/ultevents/images/contact.png" height="20" style="position:relative; left:-4px; top:-1px;"> Contact</a></li>
         <li><a href="https://kybernetik.itch.io/ultevents"><img src="/ultevents/images/itch.png" height="20" style="position:relative; left:-4px; top:-1px;"> Itch</a></li>
         <li><a href="https://assetstore.unity.com/packages/tools/gui/ultevents-111307?aid=1100l8ah5"><img src="/ultevents/images/unity-logo.png" height="20" style="position:relative; left:-4px; top:-1px;"> Asset Store</a></li>
         <li><a href="https://kybernetik.com.au"><img src="/ultevents/images/kybernetik.png" height="20" style="position:relative; left:-2px; top:-1px;"> Other Assets</a></li>
+        <li><a href="https://ko-fi.com/Z8Z2SSXSN"><img src="/ultevents/images/kofi.png" height="20" style="position:relative; left:-2px; top:-1px;"> Donate</a></li>
  
                         </ul>       
                     </div>
@@ -78,13 +78,13 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Remarks">Remarks</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#TypeParameters">Type Parameters</a></p>
 <p><a href="#Events">Events</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#Methods">Methods</a></p>
 <p><a href="#Operators">Operators</a></p>
-<p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -156,8 +156,10 @@
 				<li><a href="/ultevents/api/UltEvents/CollisionEvents3D">CollisionEvents3D</a></li>
 				<li><a href="/ultevents/api/UltEvents/DelayedUltEventHolder">Delayed<wbr>Ult<wbr>Event<wbr>Holder</a></li>
 				<li><a href="/ultevents/api/UltEvents/LifeCycleEvents">LifeCycleEvents</a></li>
+				<li><a href="/ultevents/api/UltEvents/Operators">Operators</a></li>
 				<li><a href="/ultevents/api/UltEvents/PersistentArgument">PersistentArgument</a></li>
 				<li><a href="/ultevents/api/UltEvents/PersistentCall">PersistentCall</a></li>
+				<li><a href="/ultevents/api/UltEvents/ReflectionCache">ReflectionCache</a></li>
 				<li><a href="/ultevents/api/UltEvents/TriggerEvent2D">TriggerEvent2D</a></li>
 				<li><a href="/ultevents/api/UltEvents/TriggerEvent3D">TriggerEvent3D</a></li>
 				<li><a href="/ultevents/api/UltEvents/TriggerEvents2D">TriggerEvents2D</a></li>
@@ -180,6 +182,8 @@
 				<li><a href="/ultevents/api/UltEvents/IUltEvent_3">IUltEvent<wbr>&lt;T0, <wbr>T1, <wbr>T2&gt;<wbr></a></li>
 				<li><a href="/ultevents/api/UltEvents/IUltEvent_4">IUltEvent<wbr>&lt;T0, <wbr>T1, <wbr>T2, <wbr>T3&gt;<wbr></a></li>
 				<li><a href="/ultevents/api/UltEvents/IUltEventBase">IUltEventBase</a></li>
+			<li class="header">Struct Types</li>
+				<li><a href="/ultevents/api/UltEvents/SimpleTimer">SimpleTimer</a></li>
 
 
                     </ul>
@@ -200,11 +204,7 @@
 	
 	
 		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-    A serializable event with 1 parameter which can be viewed and configured in the inspector.
-    <p></p>
-    This is a more versatile and user friendly implementation than <code class="cs">UnityEngine.Events.UnityEvent`1</code>.
-    </div>
+	<div class="lead">A serializable event with 1 parameter which can be viewed and configured in the inspector.</div>
 
 		<div class="panel panel-default">
   			<div class="panel-body">
@@ -236,10 +236,10 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/ultevents/api/UltEvents/TriggerEvent2D">TriggerEvent2D</a></li>								
 											<li><a href="/ultevents/api/UltEvents/TriggerEvent3D">TriggerEvent3D</a></li>								
-											<li><a href="/ultevents/api/UltEvents/CollisionEvent2D">CollisionEvent2D</a></li>								
+											<li><a href="/ultevents/api/UltEvents/TriggerEvent2D">TriggerEvent2D</a></li>								
 											<li><a href="/ultevents/api/UltEvents/CollisionEvent3D">CollisionEvent3D</a></li>								
+											<li><a href="/ultevents/api/UltEvents/CollisionEvent2D">CollisionEvent2D</a></li>								
 									</ul>
 								</dd>			
 							
@@ -256,14 +256,14 @@
 	click Interface1 "/ultevents/api/UltEvents/IUltEventBase"
 	Type["UltEvent&lt;T0&gt;"]
 class Type type-node
-	Derived0["TriggerEvent2D"]--&gt;Type
-	click Derived0 "/ultevents/api/UltEvents/TriggerEvent2D"
-	Derived1["TriggerEvent3D"]--&gt;Type
-	click Derived1 "/ultevents/api/UltEvents/TriggerEvent3D"
-	Derived2["CollisionEvent2D"]--&gt;Type
-	click Derived2 "/ultevents/api/UltEvents/CollisionEvent2D"
-	Derived3["CollisionEvent3D"]--&gt;Type
-	click Derived3 "/ultevents/api/UltEvents/CollisionEvent3D"
+	Derived0["TriggerEvent3D"]--&gt;Type
+	click Derived0 "/ultevents/api/UltEvents/TriggerEvent3D"
+	Derived1["TriggerEvent2D"]--&gt;Type
+	click Derived1 "/ultevents/api/UltEvents/TriggerEvent2D"
+	Derived2["CollisionEvent3D"]--&gt;Type
+	click Derived2 "/ultevents/api/UltEvents/CollisionEvent3D"
+	Derived3["CollisionEvent2D"]--&gt;Type
+	click Derived3 "/ultevents/api/UltEvents/CollisionEvent2D"
 
 						</div>
 					</div>
@@ -276,6 +276,8 @@ class Type type-node
 public class UltEvent&lt;T0&gt; : UltEventBase, IUltEvent&lt;T0&gt;, IUltEventBase</code></pre>
 
 
+	<h1 id="Remarks">Remarks</h1>
+	<div>This is a more versatile and user friendly implementation than <code class="cs">UnityEngine.Events.UnityEvent`1</code>.</div>
 
 	<h1 id="Attributes">Attributes</h1>
 	<div class="box">
@@ -387,7 +389,7 @@ public class UltEvent&lt;T0&gt; : UltEventBase, IUltEvent&lt;T0&gt;, IUltEventBa
 								<td><a href="/ultevents/api/UltEvents/UltEvent_1/797A6D18">ParameterCount</a></td>
 								<td>int</td>
 								<td>
-									<div></div>
+									<div>The number of parameters this event takes.</div>
 								</td>
 							</tr>
 							<tr>
@@ -427,7 +429,7 @@ public class UltEvent&lt;T0&gt; : UltEventBase, IUltEvent&lt;T0&gt;, IUltEventBa
 								<td><a href="/ultevents/api/UltEvents/UltEvent_1/50A8969D">AddDynamicCall<wbr>(UltEvent<wbr>&lt;T0&gt;<wbr>, <wbr>Action<wbr>&lt;T0&gt;<wbr>)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div>Ensures that `e` isn't null and adds `method` to its <code class="cs">UltEvents.UltEvent`1.DynamicCalls</code>.</div>
+									<div>Ensures that `ultEvent` isn't null and adds `method` to its <code class="cs">UltEvents.UltEvent`1.DynamicCalls</code>.</div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -435,9 +437,7 @@ public class UltEvent&lt;T0&gt; : UltEventBase, IUltEvent&lt;T0&gt;, IUltEventBa
 								<td><a href="/ultevents/api/UltEvents/UltEventBase/8EC1030E">AddPersistentCall<wbr>(Delegate)<wbr></a></td>
 								<td><a href="/ultevents/api/UltEvents/PersistentCall">PersistentCall</a></td>
 								<td>
-									<div>
-    Add the specified 'method to the persistent call list.
-    </div>
+									<div>Adds the specified `method` to the persistent call list.</div>
 											<div><small><em>Inherited from <a href="/ultevents/api/UltEvents/UltEventBase">UltEventBase</a></em></small></div>
 								</td>
 							</tr>
@@ -445,7 +445,7 @@ public class UltEvent&lt;T0&gt; : UltEventBase, IUltEvent&lt;T0&gt;, IUltEventBa
 								<td><a href="/ultevents/api/UltEvents/UltEventBase/1E3F6775">AddPersistentCall<wbr>&lt;T&gt;<wbr><wbr>(T, <wbr>Action)<wbr></a></td>
 								<td><a href="/ultevents/api/UltEvents/PersistentCall">PersistentCall</a></td>
 								<td>
-									<div>Ensures that `e` isn't null and adds `method` to its <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code>.</div>
+									<div>Ensures that `ultEvent` isn't null and adds `method` to its <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code>.</div>
 											<div><small><em>Inherited from <a href="/ultevents/api/UltEvents/UltEventBase">UltEventBase</a></em></small></div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -454,7 +454,7 @@ public class UltEvent&lt;T0&gt; : UltEventBase, IUltEvent&lt;T0&gt;, IUltEventBa
 								<td><a href="/ultevents/api/UltEvents/UltEventBase/9ACABADA">AddPersistentCall<wbr>&lt;T&gt;<wbr><wbr>(T, <wbr>Delegate)<wbr></a></td>
 								<td><a href="/ultevents/api/UltEvents/PersistentCall">PersistentCall</a></td>
 								<td>
-									<div>Ensures that `e` isn't null and adds `method` to its <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code>.</div>
+									<div>Ensures that `ultEvent` isn't null and adds `method` to its <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code>.</div>
 											<div><small><em>Inherited from <a href="/ultevents/api/UltEvents/UltEventBase">UltEventBase</a></em></small></div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -554,7 +554,7 @@ public class UltEvent&lt;T0&gt; : UltEventBase, IUltEvent&lt;T0&gt;, IUltEventBa
 								<td><a href="/ultevents/api/UltEvents/UltEvent_1/8972C594">RemoveDynamicCall<wbr>(UltEvent<wbr>&lt;T0&gt;<wbr>, <wbr>Action<wbr>&lt;T0&gt;<wbr>)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div>If `e` isn't null, this method removes `method` from its <code class="cs">UltEvents.UltEvent`1.DynamicCalls</code>.</div>
+									<div>If `ultEvent` isn't null, this method removes `method` from its <code class="cs">UltEvents.UltEvent`1.DynamicCalls</code>.</div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -562,9 +562,7 @@ public class UltEvent&lt;T0&gt; : UltEventBase, IUltEvent&lt;T0&gt;, IUltEventBa
 								<td><a href="/ultevents/api/UltEvents/UltEventBase/22F8006D">RemovePersistentCall<wbr>(Delegate)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div>
-    Remove the specified 'method from the persistent call list.
-    </div>
+									<div>Removes the specified `method` from the persistent call list.</div>
 											<div><small><em>Inherited from <a href="/ultevents/api/UltEvents/UltEventBase">UltEventBase</a></em></small></div>
 								</td>
 							</tr>
@@ -572,7 +570,7 @@ public class UltEvent&lt;T0&gt; : UltEventBase, IUltEvent&lt;T0&gt;, IUltEventBa
 								<td><a href="/ultevents/api/UltEvents/UltEventBase/5416CCFA">RemovePersistentCall<wbr>(UltEventBase, <wbr>Action)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div>If `e` isn't null, this method removes `method` from its <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code>.</div>
+									<div>If `ultEvent` isn't null, this method removes `method` from its <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code>.</div>
 											<div><small><em>Inherited from <a href="/ultevents/api/UltEvents/UltEventBase">UltEventBase</a></em></small></div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -581,7 +579,7 @@ public class UltEvent&lt;T0&gt; : UltEventBase, IUltEvent&lt;T0&gt;, IUltEventBa
 								<td><a href="/ultevents/api/UltEvents/UltEventBase/D27A9E92">RemovePersistentCall<wbr>(UltEventBase, <wbr>Delegate)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div>If `e` isn't null, this method removes `method` from its <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code>.</div>
+									<div>If `ultEvent` isn't null, this method removes `method` from its <code class="cs">UltEvents.UltEventBase.PersistentCallsList</code>.</div>
 											<div><small><em>Inherited from <a href="/ultevents/api/UltEvents/UltEventBase">UltEventBase</a></em></small></div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -644,33 +642,6 @@ public class UltEvent&lt;T0&gt; : UltEventBase, IUltEvent&lt;T0&gt;, IUltEventBa
 			</div>
 		
 
-			<h1 id="ExtensionMethods">Extension Methods</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover three-cols">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Value</th>
-								<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/ultevents/api/UltEvents/UltEventUtils/092A7626">InvokeX<wbr>&lt;T0&gt;<wbr><wbr>(T0)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Calls e.Invoke if it isn't null.
-    <p></p>
-    See also:  and .
-    </div>
-										<div><small><em>From <a href="/ultevents/api/UltEvents/UltEventUtils">UltEventUtils</a></em></small></div>
-								</td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
 
 	
 </section>
@@ -684,7 +655,47 @@ public class UltEvent&lt;T0&gt; : UltEventBase, IUltEvent&lt;T0&gt;, IUltEventBa
         </div>
         <div class="wrapper bottom-wrapper">
             <footer class="bottom-footer">
-                Generated by <a href="https://wyam.io">Wyam</a>
+                <strong><div style="text-align:left; display:flex">
+
+<div>
+<p>Documentation</p>
+<p><a href="/ultevents/docs">Documentation</a></p>
+<p><a href="/ultevents/docs/changes">Change Log</a></p>
+</div>
+
+<div style="width:10%"></div>
+
+<div>
+<p>Download</p>
+<p><a href="https://kybernetik.itch.io/ultevents">Itch.io (Recommended)</a></p>
+<p><a href="https://assetstore.unity.com/packages/tools/gui/ultevents-111307?aid=1100l8ah5">Asset Store</a></p>
+</div>
+
+<div style="width:10%"></div>
+
+<div>
+<p>Contact</p>
+<p><a href="https://forum.unity.com/threads/687970">Unity Forum</a></p>
+<p><a href="mailto:mail@kybernetik.com.au?subject=UltEvents">Email</a></p>
+</div>
+
+<div style="width:10%"></div>
+
+<div>
+<p>Other Assets</p>
+<p><a href="/animancer">Animancer</a></p>
+<p><a href="/inspector-gadgets">Inspector Gadgets</a></p>
+</div>
+
+<div style="width:10%"></div>
+
+<div>
+<p>&nbsp;</p>
+<p><a href="/flexi-motion">FlexiMotion</a></p>
+<p><a href="/weaver">Weaver</a></p>
+</div>
+
+</div></strong>
             </footer>
         </div>
         <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>

@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/ultevents/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/ultevents/assets/img/favicon.ico" type="image/x-icon">
-        <title>UltEvents - API - Serialization.Serialization.PropertyAccessor Class</title>
+        <title>UltEvents - API - PropertyAccessor Class</title>
         <link href="/ultevents/assets/css/highlight.css" rel="stylesheet">
         <link href="/ultevents/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/ultevents/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -57,12 +57,12 @@
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
                                     <li><a href="/ultevents/docs"><img src="/ultevents/images/docs.png" height="20" style="position:relative; left:-5px; top:-1px;"> Docs</a></li>
-        <li class="active"><a href="/ultevents/api/UltEvents"><img src="/ultevents/images/api.png" height="20" style="position:relative; left:-3px; top:-1px;"> API v2.2</a></li>
+        <li class="active"><a href="/ultevents/api/UltEvents"><img src="/ultevents/images/api.png" height="20" style="position:relative; left:-3px; top:-1px;"> API v3.0</a></li>
         <li><a href="https://forum.unity.com/threads/687970"><img src="/ultevents/images/forum.png" height="20" style="position:relative; left:-4px; top:-1px;"> Forum</a></li>
-        <li><a href="mailto:mail@kybernetik.com.au?subject=UltEvents"><img src="/ultevents/images/contact.png" height="20" style="position:relative; left:-4px; top:-1px;"> Contact</a></li>
         <li><a href="https://kybernetik.itch.io/ultevents"><img src="/ultevents/images/itch.png" height="20" style="position:relative; left:-4px; top:-1px;"> Itch</a></li>
         <li><a href="https://assetstore.unity.com/packages/tools/gui/ultevents-111307?aid=1100l8ah5"><img src="/ultevents/images/unity-logo.png" height="20" style="position:relative; left:-4px; top:-1px;"> Asset Store</a></li>
         <li><a href="https://kybernetik.com.au"><img src="/ultevents/images/kybernetik.png" height="20" style="position:relative; left:-2px; top:-1px;"> Other Assets</a></li>
+        <li><a href="https://ko-fi.com/Z8Z2SSXSN"><img src="/ultevents/images/kofi.png" height="20" style="position:relative; left:-2px; top:-1px;"> Donate</a></li>
  
                         </ul>       
                     </div>
@@ -147,8 +147,12 @@
 			<li class="header">Class Types</li>
 				<li><a href="/ultevents/api/UltEvents.Editor/BoolPref">BoolPref</a></li>
 				<li><a href="/ultevents/api/UltEvents.Editor/Clipboard">Clipboard</a></li>
-				<li><a href="/ultevents/api/UltEvents.Editor/ObjectPicker">ObjectPicker</a></li>
+				<li><a href="/ultevents/api/UltEvents.Editor/CollectionPropertyAccessor">Collection<wbr>Property<wbr>Accessor</a></li>
+				<li><a href="/ultevents/api/UltEvents.Editor/GenericDropdown">GenericDropdown</a></li>
+				<li class="selected"><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor">PropertyAccessor</a></li>
 				<li><a href="/ultevents/api/UltEvents.Editor/Serialization">Serialization</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/ultevents/api/UltEvents.Editor/MenuFunctionState">MenuFunctionState</a></li>
 
 
                     </ul>
@@ -163,8 +167,7 @@
 
 
 <section class="content-header">
-			<h3><a href="/ultevents/api/UltEvents.Editor/Serialization">Serialization</a>.</h3>
-	<h1>Serialization<wbr>.PropertyAccessor <small>Class</small></h1>
+	<h1>PropertyAccessor <small>Class</small></h1>
 </section>
 <section class="content">
 	
@@ -196,7 +199,7 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/ultevents/api/UltEvents.Editor/ArrayPropertyAccessor">Serialization<wbr>.<wbr>Array<wbr>Property<wbr>Accessor</a></li>								
+											<li><a href="/ultevents/api/UltEvents.Editor/CollectionPropertyAccessor">Collection<wbr>Property<wbr>Accessor</a></li>								
 									</ul>
 								</dd>			
 							
@@ -206,10 +209,10 @@
 						<div class="mermaid">
 							graph BT
 	Type--&gt;Base0["Object"]
-	Type["Serialization.PropertyAccessor"]
+	Type["PropertyAccessor"]
 class Type type-node
-	Derived0["Serialization.ArrayPropertyAccessor"]--&gt;Type
-	click Derived0 "/ultevents/api/UltEvents.Editor/ArrayPropertyAccessor"
+	Derived0["CollectionPropertyAccessor"]--&gt;Type
+	click Derived0 "/ultevents/api/UltEvents.Editor/CollectionPropertyAccessor"
 
 						</div>
 					</div>
@@ -218,7 +221,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public class Serialization.PropertyAccessor</code></pre>
+	<pre><code>public class PropertyAccessor</code></pre>
 
 
 
@@ -237,8 +240,8 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/23DBC42C">PropertyAccessor<wbr>(Serialization<wbr>.PropertyAccessor, <wbr>FieldInfo, <wbr>Type)<wbr></a></td>
-									<td>Creates a new <code class="cs">UltEvents.Editor.Serialization.PropertyAccessor</code>.</td>
+								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/DDC523FB">PropertyAccessor<wbr>(PropertyAccessor, <wbr>string, <wbr>FieldInfo, <wbr>Type)<wbr></a></td>
+									<td>Creates a new <code class="cs">UltEvents.Editor.PropertyAccessor</code>.</td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -258,21 +261,41 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/F468C0BB">Field</a></td>
+								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/5BC92CB8">Field</a></td>
 								<td></td>
 								<td>
 									<div>The field wrapped by this accessor.</div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/355E65F4">FieldType</a></td>
+								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/FC3E300E">FieldElementType</a></td>
 								<td></td>
 								<td>
-									<div>The type of the wrapped <code class="cs">UltEvents.Editor.Serialization.PropertyAccessor.Field</code>.</div>
+									<div>
+    The type of the wrapped <code class="cs">UltEvents.Editor.PropertyAccessor.Field</code>.
+    Or if it's a collection, this is the type of items in the collection.
+    </div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/A1BA0EE2">Parent</a></td>
+								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/EAD90FBE">IsDynamic</a></td>
+								<td></td>
+								<td>
+									<div>
+    Does the <code class="cs">UltEvents.Editor.PropertyAccessor.Field</code> in this accessor or any <code class="cs">UltEvents.Editor.PropertyAccessor.Parent</code> have a
+    <code class="cs">UnityEngine.SerializeReference</code> attribute?
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/8E6FA4E4">Name</a></td>
+								<td></td>
+								<td>
+									<div>The name of the field wrapped by this accessor.</div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/79E864A4">Parent</a></td>
 								<td></td>
 								<td>
 									<div>The accessor for the field which this accessor is nested inside.</div>
@@ -296,74 +319,149 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/F724F0A6">GetPath<wbr>()<wbr></a></td>
+								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/B1BAFBBE">GetField<wbr>(Object)<wbr></a></td>
+								<td>FieldInfo</td>
+								<td>
+									<div>Returns the <code class="cs">UltEvents.Editor.PropertyAccessor.Field</code> if there is one or tries to get it from the object's type.</div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/8108AECB">GetField<wbr>(Object)<wbr></a></td>
+								<td>FieldInfo</td>
+								<td>
+									<div>
+    Returns the <code class="cs">UltEvents.Editor.PropertyAccessor.Field</code> if there is one, otherwise calls <code class="cs">UltEvents.Editor.PropertyAccessor.GetField(System.Object@)</code>.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/1433C035">GetField<wbr>(SerializedObject)<wbr></a></td>
+								<td>FieldInfo</td>
+								<td>
+									<div>
+    Calls <code class="cs">UltEvents.Editor.PropertyAccessor.GetField(System.Object)</code> with the <code class="cs">UnityEditor.SerializedObject.targetObject</code>.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/34DC46AC">GetField<wbr>(SerializedProperty)<wbr></a></td>
+								<td>FieldInfo</td>
+								<td>
+									<div>
+    Calls <code class="cs">UltEvents.Editor.PropertyAccessor.GetField(UnityEditor.SerializedObject)</code> with the
+    <code class="cs">UnityEditor.SerializedProperty.serializedObject</code>.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/0B2566A6">GetFieldElementType<wbr>(Object)<wbr></a></td>
+								<td>Type</td>
+								<td>
+									<div>
+    Returns the <code class="cs">UltEvents.Editor.PropertyAccessor.FieldElementType</code> if there is one, otherwise calls <code class="cs">UltEvents.Editor.PropertyAccessor.GetField(System.Object@)</code>
+    and returns its <code class="cs">System.Reflection.FieldInfo.FieldType</code>.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/0DBCCF97">GetFieldElementType<wbr>(SerializedObject)<wbr></a></td>
+								<td>Type</td>
+								<td>
+									<div>
+    Calls <code class="cs">UltEvents.Editor.PropertyAccessor.GetFieldElementType(System.Object)</code> with the
+    <code class="cs">UnityEditor.SerializedObject.targetObject</code>.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/9249414A">GetFieldElementType<wbr>(SerializedProperty)<wbr></a></td>
+								<td>Type</td>
+								<td>
+									<div>
+    Calls <code class="cs">UltEvents.Editor.PropertyAccessor.GetFieldElementType(UnityEditor.SerializedObject)</code> with the
+    <code class="cs">UnityEditor.SerializedProperty.serializedObject</code>.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/D9572F5E">GetPath<wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
-									<div>Returns a this accessor's <code class="cs">UnityEditor.SerializedProperty.propertyPath</code>.</div>
+									<div>Returns this accessor's <code class="cs">UnityEditor.SerializedProperty.propertyPath</code>.</div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/890DA890">GetValue<wbr>(Object)<wbr></a></td>
+								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/FD2A4502">GetValue<wbr>(Object)<wbr></a></td>
 								<td>Object</td>
 								<td>
 									<div>
-    Gets the value of the from the <code class="cs">UltEvents.Editor.Serialization.PropertyAccessor.Parent</code> (if there is one), then uses it to get and return
-    the value of the <code class="cs">UltEvents.Editor.Serialization.PropertyAccessor.Field</code>.
+    Gets the value of the from the <code class="cs">UltEvents.Editor.PropertyAccessor.Parent</code> (if there is one), then uses it to get and return
+    the value of the <code class="cs">UltEvents.Editor.PropertyAccessor.Field</code>.
     </div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/21B0E693">GetValue<wbr>(SerializedObject)<wbr></a></td>
+								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/425E3EDE">GetValue<wbr>(SerializedObject)<wbr></a></td>
 								<td>Object</td>
 								<td>
 									<div>
-    Gets the value of the from the <code class="cs">UltEvents.Editor.Serialization.PropertyAccessor.Parent</code> (if there is one), then uses it to get and return
-    the value of the <code class="cs">UltEvents.Editor.Serialization.PropertyAccessor.Field</code>.
+    Gets the value of the from the <code class="cs">UltEvents.Editor.PropertyAccessor.Parent</code> (if there is one), then uses it to get and return
+    the value of the <code class="cs">UltEvents.Editor.PropertyAccessor.Field</code>.
     </div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/3E6AC67A">GetValue<wbr>(SerializedProperty)<wbr></a></td>
+								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/FDD0A473">GetValue<wbr>(SerializedProperty)<wbr></a></td>
 								<td>Object</td>
 								<td>
 									<div>
-    Gets the value of the from the <code class="cs">UltEvents.Editor.Serialization.PropertyAccessor.Parent</code> (if there is one), then uses it to get and return
-    the value of the <code class="cs">UltEvents.Editor.Serialization.PropertyAccessor.Field</code>.
+    Gets the value of the from the <code class="cs">UltEvents.Editor.PropertyAccessor.Parent</code> (if there is one), then uses it to get and return
+    the value of the <code class="cs">UltEvents.Editor.PropertyAccessor.Field</code>.
     </div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/272FF845">SetValue<wbr>(Object, <wbr>Object)<wbr></a></td>
+								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/B40F3E56">ResetValue<wbr>(<wbr>Serialized<wbr>Property, <wbr>string)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
-    Gets the value of the from the <code class="cs">UltEvents.Editor.Serialization.PropertyAccessor.Parent</code> (if there is one), then uses it to set the value
-    of the <code class="cs">UltEvents.Editor.Serialization.PropertyAccessor.Field</code>.
+    Resets the value of the <code class="cs">UnityEditor.SerializedProperty</code> to the default value of its type by executing
+    its constructor and field initializers.
     </div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/602F6EC2">SetValue<wbr>(SerializedObject, <wbr>Object)<wbr></a></td>
+								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/4714772F">SetValue<wbr>(Object, <wbr>Object)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
-    Gets the value of the from the <code class="cs">UltEvents.Editor.Serialization.PropertyAccessor.Parent</code> (if there is one), then uses it to set the value
-    of the <code class="cs">UltEvents.Editor.Serialization.PropertyAccessor.Field</code>.
+    Gets the value of the from the <code class="cs">UltEvents.Editor.PropertyAccessor.Parent</code> (if there is one), then uses it to set the value
+    of the <code class="cs">UltEvents.Editor.PropertyAccessor.Field</code>.
     </div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/38814A6F">SetValue<wbr>(<wbr>Serialized<wbr>Property, <wbr>Object)<wbr></a></td>
+								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/9161C121">SetValue<wbr>(SerializedObject, <wbr>Object)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
-    Gets the value of the from the <code class="cs">UltEvents.Editor.Serialization.PropertyAccessor.Parent</code> (if there is one), then uses it to set the value
-    of the <code class="cs">UltEvents.Editor.Serialization.PropertyAccessor.Field</code>.
+    Gets the value of the from the <code class="cs">UltEvents.Editor.PropertyAccessor.Parent</code> (if there is one), then uses it to set the value
+    of the <code class="cs">UltEvents.Editor.PropertyAccessor.Field</code>.
     </div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/F5360F5A">ToString<wbr>()<wbr></a></td>
+								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/FCDE89F3">SetValue<wbr>(<wbr>Serialized<wbr>Property, <wbr>Object)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Gets the value of the from the <code class="cs">UltEvents.Editor.PropertyAccessor.Parent</code> (if there is one), then uses it to set the value
+    of the <code class="cs">UltEvents.Editor.PropertyAccessor.Field</code>.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/ultevents/api/UltEvents.Editor/PropertyAccessor/49E42186">ToString<wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
 									<div>Returns a description of this accessor's path.</div>
@@ -388,7 +486,47 @@ class Type type-node
         </div>
         <div class="wrapper bottom-wrapper">
             <footer class="bottom-footer">
-                Generated by <a href="https://wyam.io">Wyam</a>
+                <strong><div style="text-align:left; display:flex">
+
+<div>
+<p>Documentation</p>
+<p><a href="/ultevents/docs">Documentation</a></p>
+<p><a href="/ultevents/docs/changes">Change Log</a></p>
+</div>
+
+<div style="width:10%"></div>
+
+<div>
+<p>Download</p>
+<p><a href="https://kybernetik.itch.io/ultevents">Itch.io (Recommended)</a></p>
+<p><a href="https://assetstore.unity.com/packages/tools/gui/ultevents-111307?aid=1100l8ah5">Asset Store</a></p>
+</div>
+
+<div style="width:10%"></div>
+
+<div>
+<p>Contact</p>
+<p><a href="https://forum.unity.com/threads/687970">Unity Forum</a></p>
+<p><a href="mailto:mail@kybernetik.com.au?subject=UltEvents">Email</a></p>
+</div>
+
+<div style="width:10%"></div>
+
+<div>
+<p>Other Assets</p>
+<p><a href="/animancer">Animancer</a></p>
+<p><a href="/inspector-gadgets">Inspector Gadgets</a></p>
+</div>
+
+<div style="width:10%"></div>
+
+<div>
+<p>&nbsp;</p>
+<p><a href="/flexi-motion">FlexiMotion</a></p>
+<p><a href="/weaver">Weaver</a></p>
+</div>
+
+</div></strong>
             </footer>
         </div>
         <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>

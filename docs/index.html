@@ -57,12 +57,12 @@
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
                                     <li class="active"><a href="/ultevents/docs"><img src="/ultevents/images/docs.png" height="20" style="position:relative; left:-5px; top:-1px;"> Docs</a></li>
-        <li><a href="/ultevents/api/UltEvents"><img src="/ultevents/images/api.png" height="20" style="position:relative; left:-3px; top:-1px;"> API v2.2</a></li>
+        <li><a href="/ultevents/api/UltEvents"><img src="/ultevents/images/api.png" height="20" style="position:relative; left:-3px; top:-1px;"> API v3.0</a></li>
         <li><a href="https://forum.unity.com/threads/687970"><img src="/ultevents/images/forum.png" height="20" style="position:relative; left:-4px; top:-1px;"> Forum</a></li>
-        <li><a href="mailto:mail@kybernetik.com.au?subject=UltEvents"><img src="/ultevents/images/contact.png" height="20" style="position:relative; left:-4px; top:-1px;"> Contact</a></li>
         <li><a href="https://kybernetik.itch.io/ultevents"><img src="/ultevents/images/itch.png" height="20" style="position:relative; left:-4px; top:-1px;"> Itch</a></li>
         <li><a href="https://assetstore.unity.com/packages/tools/gui/ultevents-111307?aid=1100l8ah5"><img src="/ultevents/images/unity-logo.png" height="20" style="position:relative; left:-4px; top:-1px;"> Asset Store</a></li>
         <li><a href="https://kybernetik.com.au"><img src="/ultevents/images/kybernetik.png" height="20" style="position:relative; left:-2px; top:-1px;"> Other Assets</a></li>
+        <li><a href="https://ko-fi.com/Z8Z2SSXSN"><img src="/ultevents/images/kofi.png" height="20" style="position:relative; left:-2px; top:-1px;"> Donate</a></li>
  
                         </ul>       
                     </div>
@@ -89,9 +89,19 @@
                         
 
                 <li><a href="/ultevents/docs/ult-vs-unity">UltEvents vs. UnityEvents</a></li>
-                <li><a href="/ultevents/docs/creating-and-triggering">Creating and Triggering</a></li>
-                <li><a href="/ultevents/docs/inspector-configuration">Inspector Configuration</a></li>
-                <li><a href="/ultevents/docs/advanced">Advanced</a></li>
+                <li><a href="/ultevents/docs/usage">Usage</a></li>
+                <li><a href="/ultevents/docs/event-parameters">Event Parameters</a></li>
+                <li><a href="/ultevents/docs/linked-return-values">Linked Return Values</a></li>
+                <li><a href="/ultevents/docs/premade-event-scripts">Premade Event Scripts</a></li>
+                <li class="treeview">
+                    <a href="/ultevents/docs/other">Other Features</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/ultevents/docs/other/context-menus">Context Menus</a></li>
+                <li><a href="/ultevents/docs/other/configuring-in-code">Configuring Events in Code</a></li>
+
+                    </ul>
+                </li>
                 <li><a href="/ultevents/docs/changes">Change Log</a></li>
 
                     </ul>
@@ -124,12 +134,6 @@ private UltEvents.UltEvent _MyEvent;
   <li>To trigger the execution of the event, simply call <code>_MyEvent.Invoke()</code>.</li>
 </ol>
 
-<ul>
-  <li>There are also various <a href="creating-and-triggering#premade-event-scripts">Premade Event Scripts</a> which expose <code>MonoBehaviour</code> events like <code>Awake</code>, <code>Update</code>, etc.</li>
-  <li>A scene with some example events can be found in <em>Assets/Plugins/UltEvents/Example</em>.</li>
-  <li>You can safely move this plugin anywhere in your project.</li>
-</ul>
-
 <p>The UltEvents package includes a <em>Documentation.url</em> file to bring you here, or you can use the <code>[?]</code> help button in the top right of the <code><a href="/ultevents/api/UltEvents/UltEventHolder">UltEventHolder</a></code> Inspector (or any of the other components) to open up its specific <a href="../api/UltEvents">API Documentation</a> page.</p>
 
 			<div class="box">
@@ -143,19 +147,29 @@ private UltEvents.UltEvent _MyEvent;
 Compare the features of UltEvents with UnityEvents.									</td>
 								</tr>
 								<tr>
-									<td><strong><a href="/ultevents/docs/creating-and-triggering">Creating and Triggering</a></strong></td>
+									<td><strong><a href="/ultevents/docs/usage">Usage</a></strong></td>
 									<td>
 How to add events to your scripts and trigger them.									</td>
 								</tr>
 								<tr>
-									<td><strong><a href="/ultevents/docs/inspector-configuration">Inspector Configuration</a></strong></td>
+									<td><strong><a href="/ultevents/docs/event-parameters">Event Parameters</a></strong></td>
 									<td>
-How to set up events in the Inspector.									</td>
+UltEvents can have parameters which are passed in when invoking them.									</td>
 								</tr>
 								<tr>
-									<td><strong><a href="/ultevents/docs/advanced">Advanced</a></strong></td>
+									<td><strong><a href="/ultevents/docs/linked-return-values">Linked Return Values</a></strong></td>
 									<td>
-How to use the more complex features.									</td>
+Using a value returned by one listener as a parameter in a subsequent listener.									</td>
+								</tr>
+								<tr>
+									<td><strong><a href="/ultevents/docs/premade-event-scripts">Premade Event Scripts</a></strong></td>
+									<td>
+Standard scripts which trigger UltEvents using various MonoBehaviour event messages such as Awake, Update, etc.									</td>
+								</tr>
+								<tr>
+									<td><strong><a href="/ultevents/docs/other">Other Features</a></strong></td>
+									<td>
+Additional features which some users might find useful.									</td>
 								</tr>
 								<tr>
 									<td><strong><a href="/ultevents/docs/changes">Change Log</a></strong></td>
@@ -210,6 +224,14 @@ A list of all changes that have been made in each release of UltEvents.									
 <p>Other Assets</p>
 <p><a href="/animancer">Animancer</a></p>
 <p><a href="/inspector-gadgets">Inspector Gadgets</a></p>
+</div>
+
+<div style="width:10%"></div>
+
+<div>
+<p>&nbsp;</p>
+<p><a href="/flexi-motion">FlexiMotion</a></p>
+<p><a href="/weaver">Weaver</a></p>
 </div>
 
 </div></strong>
