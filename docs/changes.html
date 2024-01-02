@@ -76,13 +76,14 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#ultevents-3.0">UltEvents 3.0</a></p>
-<p><a href="#ultevents-2.2">UltEvents 2.2</a></p>
-<p><a href="#ultevents-2.1">UltEvents 2.1</a></p>
-<p><a href="#ultevents-2.0">UltEvents 2.0</a></p>
-<p><a href="#ultevents-1.2">UltEvents 1.2</a></p>
-<p><a href="#ultevents-1.1">UltEvents 1.1</a></p>
-<p><a href="#ultevents-1.0">UltEvents 1.0</a></p>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#ultevents-3.0.1">UltEvents 3.0.1</a></p>
+<p><a href="#ultevents-3.0.0">UltEvents 3.0.0</a></p>
+<p><a href="#ultevents-2.2.0">UltEvents 2.2.0</a></p>
+<p><a href="#ultevents-2.1.0">UltEvents 2.1.0</a></p>
+<p><a href="#ultevents-2.0.0">UltEvents 2.0.0</a></p>
+<p><a href="#ultevents-1.2.0">UltEvents 1.2.0</a></p>
+<p><a href="#ultevents-1.1.0">UltEvents 1.1.0</a></p>
+<p><a href="#ultevents-1.0.0">UltEvents 1.0.0</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -128,7 +129,12 @@
 		<blockquote class="blockquote">
 <p>When updating plugins, you must delete any previous version from your project first. This is mandatory since Unity's package importer system doesn't delete or rename existing files so any old scripts that aren't directly overwritten will cause compile errors that prevent anything from working.</p>
 </blockquote>
-<h1 id="ultevents-3.0">UltEvents 3.0</h1>
+<h1 id="ultevents-3.0.1">UltEvents 3.0.1</h1>
+<ul>
+<li>2024-01-03</li>
+<li>Fixed build error in <code><a href="/ultevents/api/UltEvents/PersistentCall">PersistentCall</a></code>.</li>
+</ul>
+<h1 id="ultevents-3.0.0">UltEvents 3.0.0</h1>
 <ul>
 <li>2024-01-01</li>
 <li>Features:
@@ -168,7 +174,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="ultevents-2.2">UltEvents 2.2</h1>
+<h1 id="ultevents-2.2.0">UltEvents 2.2.0</h1>
 <ul>
 <li>2021-08-20</li>
 <li>Increased the minimum supported Unity version to 2018.4.</li>
@@ -186,7 +192,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="ultevents-2.1">UltEvents 2.1</h1>
+<h1 id="ultevents-2.1.0">UltEvents 2.1.0</h1>
 <ul>
 <li>2020-03-06</li>
 <li>Added <code>UltEventBase.DynamicInvoke</code> which takes an <code>object[]</code>.</li>
@@ -197,7 +203,7 @@
 <li>Fixed the <code>Click to add a listener</code> label to not disappear when opening the context menu.</li>
 <li>Refactored <code>SerializedPropertyReference</code> into <code>Serialization.PropertyReference</code>.</li>
 </ul>
-<h1 id="ultevents-2.0">UltEvents 2.0</h1>
+<h1 id="ultevents-2.0.0">UltEvents 2.0.0</h1>
 <ul>
 <li>2019-06-03</li>
 <li>Moved everything out of the precompiled DLL to make it easier to access and modify the source code.</li>
@@ -212,19 +218,19 @@
 <li>Fixed cached <code><a href="/ultevents/api/UltEvents/PersistentArgument">PersistentArgument</a></code> values to be cleared properly when the user modifies the argument in the Inspector.</li>
 <li>Removed the Parameter Constructors sub-menu because it isn't particularly useful now that actual constructors are supported.</li>
 </ul>
-<h1 id="ultevents-1.2">UltEvents 1.2</h1>
+<h1 id="ultevents-1.2.0">UltEvents 1.2.0</h1>
 <ul>
 <li>2018-09-11</li>
 <li>Fixed an issue where persistent arguments using parameters or returned values would cache the first value they were given and keep using that.</li>
 <li>Changed structure of source code project back to having the Runtime project link all the files in the Editor project. Shared Projects are more hassle than they're worth.</li>
 </ul>
-<h1 id="ultevents-1.1">UltEvents 1.1</h1>
+<h1 id="ultevents-1.1.0">UltEvents 1.1.0</h1>
 <ul>
 <li>2018-07-21</li>
 <li>Fixed invocation to not allocate garbage every time for value type parameters.</li>
 <li>Changed structure of source code project to use a Shared Project instead of having the Runtime project link all the files in the Editor project.</li>
 </ul>
-<h1 id="ultevents-1.0">UltEvents 1.0</h1>
+<h1 id="ultevents-1.0.0">UltEvents 1.0.0</h1>
 <ul>
 <li>2018-07-10</li>
 <li>Initial release.</li>
