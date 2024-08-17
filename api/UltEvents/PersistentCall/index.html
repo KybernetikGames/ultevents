@@ -170,6 +170,7 @@
 				<li><a href="/ultevents/api/UltEvents/UltEventBase">UltEventBase</a></li>
 				<li><a href="/ultevents/api/UltEvents/UltEventHolder">UltEventHolder</a></li>
 				<li><a href="/ultevents/api/UltEvents/UltEventUtils">UltEventUtils</a></li>
+				<li><a href="/ultevents/api/UltEvents/UnityEventCompatibility">Unity<wbr>Event<wbr>Compatibility</a></li>
 				<li><a href="/ultevents/api/UltEvents/UpdateEvents">UpdateEvents</a></li>
 			<li class="header">Enum Types</li>
 				<li><a href="/ultevents/api/UltEvents/PersistentArgumentType">Persistent<wbr>Argument<wbr>Type</a></li>
@@ -217,17 +218,11 @@
 								<dt>Namespace</dt>
 								<dd><a href="/ultevents/api/UltEvents">UltEvents</a></dd>
 											
-								<dt>Interfaces</dt>
-								<dd>
-									<ul class="list-unstyled">
-											<li>I<wbr>Serialization<wbr>Callback<wbr>Receiver</li>								
-									</ul>
-								</dd>
 							
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>Object</li>								
+											<li>I<wbr>Serialization<wbr>Callback<wbr>Receiver</li>								
 									</ul>
 								</dd>				
 							
@@ -237,8 +232,7 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph BT
-	Type--&gt;Base0["Object"]
-	Type-.-&gt;Interface0["ISerializationCallbackReceiver"]
+	Type--&gt;Base0["ISerializationCallbackReceiver"]
 	Type["PersistentCall"]
 class Type type-node
 
@@ -298,7 +292,7 @@ public sealed class PersistentCall : ISerializationCallbackReceiver</code></pre>
 									<td>Constructs a new <code class="cs">UltEvents.PersistentCall</code> to serialize the specified `method`.</td>
 							</tr>
 							<tr>
-								<td><a href="/ultevents/api/UltEvents/PersistentCall/91291E5B">PersistentCall<wbr>(MethodInfo, <wbr>Object)<wbr></a></td>
+								<td><a href="/ultevents/api/UltEvents/PersistentCall/91291E5B">PersistentCall<wbr>(MethodInfo, <wbr>UnityEngine<wbr>.Object)<wbr></a></td>
 									<td>Constructs a new <code class="cs">UltEvents.PersistentCall</code> to serialize the specified `method`.</td>
 							</tr>
 					</tbody></table>
@@ -393,7 +387,7 @@ public sealed class PersistentCall : ISerializationCallbackReceiver</code></pre>
 							</tr>
 							<tr>
 								<td><a href="/ultevents/api/UltEvents/PersistentCall/D8DE61BE">Target</a></td>
-								<td>Object</td>
+								<td>UnityEngine<wbr>.Object</td>
 								<td>
 									<div>The object on which the persistent method is called.</div>
 								</td>
@@ -479,7 +473,7 @@ public sealed class PersistentCall : ISerializationCallbackReceiver</code></pre>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/ultevents/api/UltEvents/PersistentCall/B85503CC">SetField<wbr>(FieldInfo, <wbr>Object, <wbr>bool)<wbr></a></td>
+								<td><a href="/ultevents/api/UltEvents/PersistentCall/B85503CC">SetField<wbr>(FieldInfo, <wbr>UnityEngine<wbr>.Object, <wbr>bool)<wbr></a></td>
 								<td><a href="/ultevents/api/UltEvents/PersistentArgument">PersistentArgument</a></td>
 								<td>
 									<div>
@@ -504,7 +498,7 @@ public sealed class PersistentCall : ISerializationCallbackReceiver</code></pre>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/ultevents/api/UltEvents/PersistentCall/AF386855">SetMethod<wbr>(MethodBase, <wbr>Object)<wbr></a></td>
+								<td><a href="/ultevents/api/UltEvents/PersistentCall/AF386855">SetMethod<wbr>(MethodBase, <wbr>UnityEngine<wbr>.Object)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>Sets the <code class="cs">UltEvents.PersistentCall.Method</code>.</div>

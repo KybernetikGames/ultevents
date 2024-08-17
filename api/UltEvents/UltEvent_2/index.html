@@ -172,6 +172,7 @@
 				<li><a href="/ultevents/api/UltEvents/UltEventBase">UltEventBase</a></li>
 				<li><a href="/ultevents/api/UltEvents/UltEventHolder">UltEventHolder</a></li>
 				<li><a href="/ultevents/api/UltEvents/UltEventUtils">UltEventUtils</a></li>
+				<li><a href="/ultevents/api/UltEvents/UnityEventCompatibility">Unity<wbr>Event<wbr>Compatibility</a></li>
 				<li><a href="/ultevents/api/UltEvents/UpdateEvents">UpdateEvents</a></li>
 			<li class="header">Enum Types</li>
 				<li><a href="/ultevents/api/UltEvents/PersistentArgumentType">Persistent<wbr>Argument<wbr>Type</a></li>
@@ -260,7 +261,7 @@ public class UltEvent&lt;T0, T1&gt; : UltEventBase, IUltEvent&lt;T0, T1&gt;, IUl
 
 
 	<h1 id="Remarks">Remarks</h1>
-	<div>This is a more versatile and user friendly implementation than <code class="cs">UnityEngine.Events.UnityEvent`2</code>.</div>
+	<div>This is a more versatile and user friendly implementation than <code class="cs">UnityEvent&lt;T0, T1&gt;</code>.</div>
 
 	<h1 id="Attributes">Attributes</h1>
 	<div class="box">
@@ -501,9 +502,7 @@ public class UltEvent&lt;T0, T1&gt; : UltEventBase, IUltEvent&lt;T0, T1&gt;, IUl
 								<td>void</td>
 								<td>
 									<div>
-    Invokes all <code class="cs">UltEvents.UltEvent`2.PersistentCalls</code> then all <code class="cs">UltEvents.UltEvent`2.DynamicCalls</code>.
-    <p></p>
-    See also:  and .
+    Invokes all <code class="cs">UltEvents.UltEvent.PersistentCalls</code> then all <code class="cs">UltEvents.IUltEvent`2.DynamicCalls</code>.
     </div>
 								</td>
 							</tr>
@@ -520,10 +519,8 @@ public class UltEvent&lt;T0, T1&gt; : UltEventBase, IUltEvent&lt;T0, T1&gt;, IUl
 								<td>void</td>
 								<td>
 									<div>
-    Invokes all <code class="cs">UltEvents.UltEvent`2.PersistentCalls</code> then all <code class="cs">UltEvents.UltEvent`2.DynamicCalls</code> inside a try/catch block
-    which logs any exceptions that are thrown.
-    <p></p>
-    See also:  and .
+    Invokes all <code class="cs">UltEvents.UltEvent`2.PersistentCalls</code> then all <code class="cs">UltEvents.UltEvent`2.DynamicCalls</code>
+    inside a try/catch block which logs any exceptions that are thrown.
     </div>
 								</td>
 							</tr>

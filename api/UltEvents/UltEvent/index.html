@@ -171,6 +171,7 @@
 				<li><a href="/ultevents/api/UltEvents/UltEventBase">UltEventBase</a></li>
 				<li><a href="/ultevents/api/UltEvents/UltEventHolder">UltEventHolder</a></li>
 				<li><a href="/ultevents/api/UltEvents/UltEventUtils">UltEventUtils</a></li>
+				<li><a href="/ultevents/api/UltEvents/UnityEventCompatibility">Unity<wbr>Event<wbr>Compatibility</a></li>
 				<li><a href="/ultevents/api/UltEvents/UpdateEvents">UpdateEvents</a></li>
 			<li class="header">Enum Types</li>
 				<li><a href="/ultevents/api/UltEvents/PersistentArgumentType">Persistent<wbr>Argument<wbr>Type</a></li>
@@ -256,11 +257,11 @@ class Type type-node
 
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>[Serializable]
-public sealed class UltEvent : UltEventBase, IUltEvent, IUltEventBase</code></pre>
+public class UltEvent : UltEventBase, IUltEvent, IUltEventBase</code></pre>
 
 
 	<h1 id="Remarks">Remarks</h1>
-	<div>This is a more versatile and user friendly implementation than <code class="cs">UnityEngine.Events.UnityEvent</code>.</div>
+	<div>This is a more versatile and user friendly implementation than <code class="cs">UnityEvent</code>.</div>
 
 	<h1 id="Attributes">Attributes</h1>
 	<div class="box">
@@ -480,9 +481,7 @@ public sealed class UltEvent : UltEventBase, IUltEvent, IUltEventBase</code></pr
 								<td>void</td>
 								<td>
 									<div>
-    Invokes all <code class="cs">UltEvents.UltEvent.PersistentCalls</code> then all <code class="cs">UltEvents.UltEvent.DynamicCalls</code>.
-    <p></p>
-    See also:  and .
+    Invokes all <code class="cs">UltEvents.UltEvent.PersistentCalls</code> then all <code class="cs">UltEvents.IUltEvent.DynamicCalls</code>.
     </div>
 								</td>
 							</tr>
@@ -499,10 +498,8 @@ public sealed class UltEvent : UltEventBase, IUltEvent, IUltEventBase</code></pr
 								<td>void</td>
 								<td>
 									<div>
-    Invokes all <code class="cs">UltEvents.UltEvent.PersistentCalls</code> then all <code class="cs">UltEvents.UltEvent.DynamicCalls</code> inside a try/catch block
-    which logs any exceptions that are thrown.
-    <p></p>
-    See also:  and .
+    Invokes all <code class="cs">UltEvents.UltEvent.PersistentCalls</code> then all <code class="cs">UltEvents.UltEvent.DynamicCalls</code>
+    inside a try/catch block which logs any exceptions that are thrown.
     </div>
 								</td>
 							</tr>

@@ -80,6 +80,8 @@
 <p><a href="#Syntax">Syntax</a></p>
 <p><a href="#TypeParameters">Type Parameters</a></p>
 <p><a href="#Events">Events</a></p>
+<p><a href="#Methods">Methods</a></p>
+<p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -167,6 +169,7 @@
 				<li><a href="/ultevents/api/UltEvents/UltEventBase">UltEventBase</a></li>
 				<li><a href="/ultevents/api/UltEvents/UltEventHolder">UltEventHolder</a></li>
 				<li><a href="/ultevents/api/UltEvents/UltEventUtils">UltEventUtils</a></li>
+				<li><a href="/ultevents/api/UltEvents/UnityEventCompatibility">Unity<wbr>Event<wbr>Compatibility</a></li>
 				<li><a href="/ultevents/api/UltEvents/UpdateEvents">UpdateEvents</a></li>
 			<li class="header">Enum Types</li>
 				<li><a href="/ultevents/api/UltEvents/PersistentArgumentType">Persistent<wbr>Argument<wbr>Type</a></li>
@@ -227,11 +230,11 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
+											<li><a href="/ultevents/api/UltEvents/CollisionEvent3D">CollisionEvent3D</a></li>								
 											<li><a href="/ultevents/api/UltEvents/TriggerEvent3D">TriggerEvent3D</a></li>								
+											<li><a href="/ultevents/api/UltEvents/CollisionEvent2D">CollisionEvent2D</a></li>								
 											<li><a href="/ultevents/api/UltEvents/TriggerEvent2D">TriggerEvent2D</a></li>								
 											<li><a href="/ultevents/api/UltEvents/UltEvent_1">UltEvent</a><wbr>&lt;<a href="/ultevents/api/UltEvents/UltEvent_1#typeparam-T0">T0</a>&gt;<wbr></li>								
-											<li><a href="/ultevents/api/UltEvents/CollisionEvent3D">CollisionEvent3D</a></li>								
-											<li><a href="/ultevents/api/UltEvents/CollisionEvent2D">CollisionEvent2D</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -243,16 +246,16 @@
 	click Interface0 "/ultevents/api/UltEvents/IUltEventBase"
 	Type["IUltEvent&lt;T0&gt;"]
 class Type type-node
-	Implementing0["TriggerEvent3D"]-.-&gt;Type
-	click Implementing0 "/ultevents/api/UltEvents/TriggerEvent3D"
-	Implementing1["TriggerEvent2D"]-.-&gt;Type
-	click Implementing1 "/ultevents/api/UltEvents/TriggerEvent2D"
-	Implementing2["UltEvent&lt;T0&gt;"]-.-&gt;Type
-	click Implementing2 "/ultevents/api/UltEvents/UltEvent_1"
-	Implementing3["CollisionEvent3D"]-.-&gt;Type
-	click Implementing3 "/ultevents/api/UltEvents/CollisionEvent3D"
-	Implementing4["CollisionEvent2D"]-.-&gt;Type
-	click Implementing4 "/ultevents/api/UltEvents/CollisionEvent2D"
+	Implementing0["CollisionEvent3D"]-.-&gt;Type
+	click Implementing0 "/ultevents/api/UltEvents/CollisionEvent3D"
+	Implementing1["TriggerEvent3D"]-.-&gt;Type
+	click Implementing1 "/ultevents/api/UltEvents/TriggerEvent3D"
+	Implementing2["CollisionEvent2D"]-.-&gt;Type
+	click Implementing2 "/ultevents/api/UltEvents/CollisionEvent2D"
+	Implementing3["TriggerEvent2D"]-.-&gt;Type
+	click Implementing3 "/ultevents/api/UltEvents/TriggerEvent2D"
+	Implementing4["UltEvent&lt;T0&gt;"]-.-&gt;Type
+	click Implementing4 "/ultevents/api/UltEvents/UltEvent_1"
 
 						</div>
 					</div>
@@ -315,8 +318,63 @@ class Type type-node
 
 
 
+			<h1 id="Methods">Methods</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/ultevents/api/UltEvents/IUltEvent_1/DBF66FFB">Invoke<wbr>(T0)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Invokes all <code class="cs">UltEvents.UltEvent.PersistentCalls</code> then all <code class="cs">UltEvents.IUltEvent`1.DynamicCalls</code>.
+    </div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
 
 
+			<h1 id="ExtensionMethods">Extension Methods</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/ultevents/api/UltEvents/UnityEventCompatibility/98D42A93">AddListener<wbr>&lt;T0&gt;<wbr><wbr>(Action<wbr>&lt;T0&gt;<wbr>)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>Adds the `action` to the <code class="cs">UltEvents.IUltEvent.DynamicCalls</code>.</div>
+										<div><small><em>From <a href="/ultevents/api/UltEvents/UnityEventCompatibility">Unity<wbr>Event<wbr>Compatibility</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/ultevents/api/UltEvents/UnityEventCompatibility/C540456C">RemoveListener<wbr>&lt;T0&gt;<wbr><wbr>(Action<wbr>&lt;T0&gt;<wbr>)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>Removes the `action` from the <code class="cs">UltEvents.IUltEvent.DynamicCalls</code>.</div>
+										<div><small><em>From <a href="/ultevents/api/UltEvents/UnityEventCompatibility">Unity<wbr>Event<wbr>Compatibility</a></em></small></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
 
 	
 </section>

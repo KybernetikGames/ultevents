@@ -76,7 +76,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#ultevents-3.0.2">UltEvents 3.0.2</a></p>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#ultevents-3.0.3">UltEvents 3.0.3</a></p>
+<p><a href="#ultevents-3.0.2">UltEvents 3.0.2</a></p>
 <p><a href="#ultevents-3.0.1">UltEvents 3.0.1</a></p>
 <p><a href="#ultevents-3.0.0">UltEvents 3.0.0</a></p>
 <p><a href="#ultevents-2.2.0">UltEvents 2.2.0</a></p>
@@ -130,6 +131,18 @@
 		<blockquote class="blockquote">
 <p>When updating plugins, you must delete any previous version from your project first. This is mandatory since Unity's package importer system doesn't delete or rename existing files so any old scripts that aren't directly overwritten will cause compile errors that prevent anything from working.</p>
 </blockquote>
+<h1 id="ultevents-3.0.3">UltEvents 3.0.3</h1>
+<ul>
+<li>2024-08-17</li>
+<li>Un-<code>sealed</code> <code><a href="/ultevents/api/UltEvents/UltEvent">UltEvent</a></code>. All the generic versions were already un-<code>sealed</code> and this allows Animancer to have an inheriting class which can be used for Animancer Event callbacks.</li>
+<li>Changed the Example scene into a hidden Sample which can be imported via the Package Manager.</li>
+<li>Changed the type picker menu to support context menu style in Unity 2023 since it's now searchable and scrollable.</li>
+<li>Added <code>IUltEvent.Invoke</code>.</li>
+<li>Added <code><a href="/ultevents/api/UltEvents/UnityEventCompatibility">UnityEventCompatibility</a></code> containing extension methods for <code>AddCallback</code> and <code>RemoveCallback</code> to give <code>UltEvents</code> an API like <code>UnityEvents</code>.</li>
+<li>Added conditional compilation symbols for <code>UNITY_PHYSICS_3D</code> and <code>2D</code> in case those modules have been disabled.</li>
+<li>Fixed <code>UltEventUtils.GetPlacementName</code> to give the proper values beyond "3rd".</li>
+<li>Fixed potential <code>NullReferenceException</code> in <code>UltEventBase.ToString</code>.</li>
+</ul>
 <h1 id="ultevents-3.0.2">UltEvents 3.0.2</h1>
 <ul>
 <li>2024-01-04</li>
@@ -150,6 +163,7 @@
 <li>Replaced the method selection menu with an <code>AdvancedDropdown</code> which has a nicer layout and inbuilt search bar.
 <ul>
 <li>The old context menu style can be reactivated by selecting "Display Options -&gt; Context Menu Style".</li>
+<li>Consider using the old style in Unity 2023+ because its context menus are natively searchable and scrollable.</li>
 </ul>
 </li>
 <li>Added <code><a href="/ultevents/api/UltEvents/Operators">Operators</a></code> for simple math.</li>
@@ -214,11 +228,6 @@
 <ul>
 <li>2019-06-03</li>
 <li>Moved everything out of the precompiled DLL to make it easier to access and modify the source code.</li>
-</ul>
-<blockquote class="blockquote">
-<p><strong>Warning</strong>: when upgrading from an earlier version you must delete the old version before importing the new one. This will also cause all of the <a href="creating-and-triggering#premade-event-scripts">Premade Event Scripts</a> in your project to go missing so you will need to set them all up again. This is an unfortunate side effect of the way Unity handles references to scripts inside a DLL compared to regular script files.</p>
-</blockquote>
-<ul>
 <li>Replaced PDF user manual with a website hosted at kybernetik.com.au/ultevents.</li>
 <li>Added support for constructors.</li>
 <li>Added interfaces corresponding to all <code><a href="/ultevents/api/UltEvents/UltEvent">UltEvent</a></code> types so that the ability to add and remove listeners can be exposed without exposing the ability to invoke, clear, or access other members of the event.</li>

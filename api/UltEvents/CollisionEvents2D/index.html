@@ -168,6 +168,7 @@
 				<li><a href="/ultevents/api/UltEvents/UltEventBase">UltEventBase</a></li>
 				<li><a href="/ultevents/api/UltEvents/UltEventHolder">UltEventHolder</a></li>
 				<li><a href="/ultevents/api/UltEvents/UltEventUtils">UltEventUtils</a></li>
+				<li><a href="/ultevents/api/UltEvents/UnityEventCompatibility">Unity<wbr>Event<wbr>Compatibility</a></li>
 				<li><a href="/ultevents/api/UltEvents/UpdateEvents">UpdateEvents</a></li>
 			<li class="header">Enum Types</li>
 				<li><a href="/ultevents/api/UltEvents/PersistentArgumentType">Persistent<wbr>Argument<wbr>Type</a></li>
@@ -201,8 +202,8 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    Holds <code class="cs">UltEvents.UltEvent</code>s which are called by various <code class="cs">UnityEngine.MonoBehaviour</code> 2D collision events:
-    <code class="cs">UltEvents.CollisionEvents2D.OnCollisionEnter2D(UnityEngine.Collision2D)</code>, <code class="cs">UltEvents.CollisionEvents2D.OnCollisionStay2D(UnityEngine.Collision2D)</code>, and <code class="cs">UltEvents.CollisionEvents2D.OnCollisionExit2D(UnityEngine.Collision2D)</code>.
+    Holds <code class="cs">UltEvents.UltEvent</code>s which are called by various <code class="cs">MonoBehaviour</code> 2D collision events:
+    <code class="cs">UltEvents.CollisionEvents2D.OnCollisionEnter2D(Collision2D)</code>, <code class="cs">UltEvents.CollisionEvents2D.OnCollisionStay2D(Collision2D)</code>, and <code class="cs">UltEvents.CollisionEvents2D.OnCollisionExit2D(Collision2D)</code>.
     </div>
 
 		<div class="panel panel-default">
@@ -264,7 +265,7 @@ public class CollisionEvents2D : MonoBehaviour</code></pre>
 						<td></td>
 					</tr>
 					<tr>
-						<td>HelpURLAttribute</td>
+						<td>HelpURL</td>
 						<td></td>
 					</tr>
 					<tr>
@@ -300,21 +301,21 @@ public class CollisionEvents2D : MonoBehaviour</code></pre>
 								<td><a href="/ultevents/api/UltEvents/CollisionEvents2D/5AADE190">CollisionEnterEvent</a></td>
 								<td><a href="/ultevents/api/UltEvents/CollisionEvent2D">CollisionEvent2D</a></td>
 								<td>
-									<div>Invoked by <code class="cs">UltEvents.CollisionEvents2D.OnCollisionEnter2D(UnityEngine.Collision2D)</code>.</div>
+									<div>Invoked by <code class="cs">UltEvents.CollisionEvents2D.OnCollisionEnter2D(Collision2D)</code>.</div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/ultevents/api/UltEvents/CollisionEvents2D/80A1E4D4">CollisionExitEvent</a></td>
 								<td><a href="/ultevents/api/UltEvents/CollisionEvent2D">CollisionEvent2D</a></td>
 								<td>
-									<div>Invoked by <code class="cs">UltEvents.CollisionEvents2D.OnCollisionExit2D(UnityEngine.Collision2D)</code>.</div>
+									<div>Invoked by <code class="cs">UltEvents.CollisionEvents2D.OnCollisionExit2D(Collision2D)</code>.</div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/ultevents/api/UltEvents/CollisionEvents2D/8DD2E0D3">CollisionStayEvent</a></td>
 								<td><a href="/ultevents/api/UltEvents/CollisionEvent2D">CollisionEvent2D</a></td>
 								<td>
-									<div>Invoked by <code class="cs">UltEvents.CollisionEvents2D.OnCollisionStay2D(UnityEngine.Collision2D)</code>.</div>
+									<div>Invoked by <code class="cs">UltEvents.CollisionEvents2D.OnCollisionStay2D(Collision2D)</code>.</div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -334,21 +335,21 @@ public class CollisionEvents2D : MonoBehaviour</code></pre>
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/ultevents/api/UltEvents/CollisionEvents2D/683B9D00">OnCollisionEnter2D<wbr>(Collision2D)<wbr></a></td>
+								<td><a href="/ultevents/api/UltEvents/CollisionEvents2D/36405EE1">OnCollisionEnter2D<wbr>(Collision2D)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>Invokes <code class="cs">UltEvents.CollisionEvents2D.CollisionEnterEvent</code>.</div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/ultevents/api/UltEvents/CollisionEvents2D/EAF0604F">OnCollisionExit2D<wbr>(Collision2D)<wbr></a></td>
+								<td><a href="/ultevents/api/UltEvents/CollisionEvents2D/1ACF9C71">OnCollisionExit2D<wbr>(Collision2D)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>Invokes <code class="cs">UltEvents.CollisionEvents2D.CollisionExitEvent</code>.</div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/ultevents/api/UltEvents/CollisionEvents2D/1EB9AAEA">OnCollisionStay2D<wbr>(Collision2D)<wbr></a></td>
+								<td><a href="/ultevents/api/UltEvents/CollisionEvents2D/CE8BA10C">OnCollisionStay2D<wbr>(Collision2D)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>Invokes <code class="cs">UltEvents.CollisionEvents2D.CollisionStayEvent</code>.</div>

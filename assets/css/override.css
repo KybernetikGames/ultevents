@@ -1,6 +1,6 @@
 body.layout-boxed {
   background-image: none;
-  background-color: #fff8cc;
+  background-color: #fffbee;
 }
 body.layout-boxed .top-banner {
   background-color: #a91;
@@ -592,11 +592,11 @@ code a {
   background-color: #a91 !important;
 }
 body.layout-boxed {
-  background-image: -webkit-linear-gradient(top, #eeb 0%, #dd9 100%);
-  background-image: -o-linear-gradient(top, #eeb 0%, #dd9 100%);
-  background-image: linear-gradient(to bottom, #eeb 0%, #dd9 100%);
+  background-image: -webkit-linear-gradient(top, #ffc 0%, #eea 100%);
+  background-image: -o-linear-gradient(top, #ffc 0%, #eea 100%);
+  background-image: linear-gradient(to bottom, #ffc 0%, #eea 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffeeeebb', endColorstr='#ffdddd99', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffcc', endColorstr='#ffeeeeaa', GradientType=0);
 }
 .content,
 .content-header,
@@ -604,10 +604,10 @@ body.layout-boxed {
 .wrapper,
 .main-footer,
 .main-sidebar {
-  background: #fff8cc;
+  background: #fffbee;
 }
 .content-header > h1 {
-  background: #dd9;
+  background: #eea;
 }
 .main-footer {
   display: none;
@@ -632,10 +632,10 @@ a:focus {
   border-top: hidden;
 }
 .table > tbody > tr:nth-of-type(odd) {
-  background-color: #eeb;
+  background-color: #ffc;
 }
 .table > tbody > tr:nth-of-type(even) {
-  background-color: #dd9;
+  background-color: #eea;
 }
 .table .section {
   border-left: hidden;
@@ -643,7 +643,7 @@ a:focus {
 }
 .table .section > th,
 .table .section > td {
-  background: #fff8cc;
+  background: #fffbee;
   font-size: 1.5em;
 }
 .table-bordered {
@@ -676,4 +676,8 @@ summary {
 details[open] summary {
   border-bottom: 1px solid #aaa;
   margin-bottom: 0.5em;
+}
+code {
+  border: 1px solid #e2e2e2;
+  padding: 1px;
 }
