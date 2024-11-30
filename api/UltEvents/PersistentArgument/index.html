@@ -147,8 +147,6 @@
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
 				<li><a href="/ultevents/api/UltEvents/ArrayCache_1">ArrayCache<wbr>&lt;T&gt;<wbr></a></li>
-				<li><a href="/ultevents/api/UltEvents/CollisionEvent2D">CollisionEvent2D</a></li>
-				<li><a href="/ultevents/api/UltEvents/CollisionEvent3D">CollisionEvent3D</a></li>
 				<li><a href="/ultevents/api/UltEvents/CollisionEvents2D">CollisionEvents2D</a></li>
 				<li><a href="/ultevents/api/UltEvents/CollisionEvents3D">CollisionEvents3D</a></li>
 				<li><a href="/ultevents/api/UltEvents/DelayedUltEventHolder">Delayed<wbr>Ult<wbr>Event<wbr>Holder</a></li>
@@ -157,8 +155,6 @@
 				<li class="selected"><a href="/ultevents/api/UltEvents/PersistentArgument">PersistentArgument</a></li>
 				<li><a href="/ultevents/api/UltEvents/PersistentCall">PersistentCall</a></li>
 				<li><a href="/ultevents/api/UltEvents/ReflectionCache">ReflectionCache</a></li>
-				<li><a href="/ultevents/api/UltEvents/TriggerEvent2D">TriggerEvent2D</a></li>
-				<li><a href="/ultevents/api/UltEvents/TriggerEvent3D">TriggerEvent3D</a></li>
 				<li><a href="/ultevents/api/UltEvents/TriggerEvents2D">TriggerEvents2D</a></li>
 				<li><a href="/ultevents/api/UltEvents/TriggerEvents3D">TriggerEvents3D</a></li>
 				<li><a href="/ultevents/api/UltEvents/UltEvent">UltEvent</a></li>
@@ -168,6 +164,7 @@
 				<li><a href="/ultevents/api/UltEvents/UltEvent_4">UltEvent<wbr>&lt;T0, <wbr>T1, <wbr>T2, <wbr>T3&gt;<wbr></a></li>
 				<li><a href="/ultevents/api/UltEvents/UltEventBase">UltEventBase</a></li>
 				<li><a href="/ultevents/api/UltEvents/UltEventHolder">UltEventHolder</a></li>
+				<li><a href="/ultevents/api/UltEvents/UltEventsHelpUrlAttribute">Ult<wbr>Events<wbr>Help<wbr>Url<wbr>Attribute</a></li>
 				<li><a href="/ultevents/api/UltEvents/UltEventUtils">UltEventUtils</a></li>
 				<li><a href="/ultevents/api/UltEvents/UnityEventCompatibility">Unity<wbr>Event<wbr>Compatibility</a></li>
 				<li><a href="/ultevents/api/UltEvents/UpdateEvents">UpdateEvents</a></li>
@@ -336,7 +333,7 @@ public sealed class PersistentArgument</code></pre>
 								<td><a href="/ultevents/api/UltEvents/PersistentArgument/F809F6B0">Float</a></td>
 								<td>float</td>
 								<td>
-									<div>The <code class="cs"><a href="/ultevents">float</a></code> value of this argument.</div>
+									<div>The <code class="cs">System.Single</code> value of this argument.</div>
 								</td>
 							</tr>
 							<tr>
@@ -499,6 +496,49 @@ public sealed class PersistentArgument</code></pre>
     the `assemblyQualifiedName` will be assigned as well (otherwise null).
     </div>
 											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/ultevents/api/UltEvents/PersistentArgument/5307FFD9">LinkTo<wbr>(<wbr>Persistent<wbr>Argument<wbr>Type, <wbr>int, <wbr>Type)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Sets this argument to use
+    <code class="cs">UltEvents.PersistentArgumentType.Parameter</code> or
+    <code class="cs">UltEvents.PersistentArgumentType.ReturnValue</code>.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/ultevents/api/UltEvents/PersistentArgument/C7A68A17">LinkTo<wbr>(UltEventBase, <wbr>Persistent<wbr>Argument<wbr>Type, <wbr>int)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Sets this argument to use
+    <code class="cs">UltEvents.PersistentArgumentType.Parameter</code> or
+    <code class="cs">UltEvents.PersistentArgumentType.ReturnValue</code>.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/ultevents/api/UltEvents/PersistentArgument/E2B74513">LinkToParameter<wbr>(UltEventBase, <wbr>int)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>Sets this argument to use <code class="cs">UltEvents.PersistentArgumentType.Parameter</code>.</div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/ultevents/api/UltEvents/PersistentArgument/1051CBE9">LinkToReturnValue<wbr>(UltEventBase, <wbr>int)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>Sets this argument to use <code class="cs">UltEvents.PersistentArgumentType.ReturnValue</code>.</div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/ultevents/api/UltEvents/PersistentArgument/CD954A8F">LinkToReturnValue<wbr>(UltEventBase, <wbr>PersistentCall)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>Sets this argument to use <code class="cs">UltEvents.PersistentArgumentType.ReturnValue</code>.</div>
 								</td>
 							</tr>
 							<tr>
